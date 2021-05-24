@@ -77,16 +77,16 @@ or
             <div class="parent">
                 <div class="row">
                     <div class="item">
-                        <div data-loader="box-rectangular" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-rectangular" size={100}></div>
+                        <div data-loader="box-rectangular" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-rectangular" size="100"></div>
                     </div>
                     <div class="item">
-                        <div data-loader="box-rectangular" loader-color="#FFFFFF" title="box-rectangular" size={100}></div>
+                        <div data-loader="box-rectangular" loader-color="#FFFFFF" title="box-rectangular" size="100"></div>
                     </div>
                     <div class="item">
-                        <div data-loader="box-rectangular" title="box-rectangular" size={100}></div>
+                        <div data-loader="box-rectangular" title="box-rectangular" size="100"></div>
                     </div>
                     <div class="item">
-                        <div data-loader="box-rectangular" size={100}></div>
+                        <div data-loader="box-rectangular" size="100"></div>
                     </div>
                     <div class="item">
                         <div data-loader size={50}></div>

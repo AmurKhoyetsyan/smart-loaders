@@ -26,6 +26,7 @@
     color: var(--cl);
 }
 
+[data-loader],
 .hourglass,
 .spinner3,
 .spinner2,
