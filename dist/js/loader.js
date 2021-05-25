@@ -14,6 +14,7 @@
         boxRotateY: "box-rotate-y",
         boxRotateZ: "box-rotate-z",
         boxRectangular: "box-rectangular",
+        boxUp: "box-up",
         heart: "heart",
         bubbleScale: "bubble-scale",
         bubbleTop: "bubble-top",
@@ -436,6 +437,33 @@
         boxRotateX: (item, index) => boxRotate(item, index, 'box1'),
         boxRotateY: (item, index) => boxRotate(item, index, 'box2'),
         boxRotateZ: (item, index) => boxRotate(item, index, 'box3'),
+        boxUp: (item, index) => {
+            let loaderItems = document.createElement('DIV');
+            loaderItems.classList.add('loader-items');
+
+            let loader = document.createElement('DIV');
+            loader.classList.add('loader');
+
+            let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
+            loader.setAttribute("style", `--size: ${size}`);
+
+            let backgroundColor = getBackground(item);
+
+            for(let i = 0; i <= 4; i++) {
+                let box = document.createElement('DIV');
+                box.classList.add('item');
+                box.setAttribute("style", `--i: ${i}; --shadow: ${backgroundColor}; --bga: ${rgbToPart(backgroundColor, "80")}; --bg: ${backgroundColor}`);
+                loaderItems.appendChild(box);
+            }
+
+            loader.appendChild(loaderItems);
+
+            let box = document.createElement('DIV');
+            box.classList.add('box6');
+            box.appendChild(loader);
+            item.appendChild(box);
+            createTitle(item);
+        },
         heart: (item, index) => {
             let loaderItems = document.createElement('DIV');
             loaderItems.classList.add('loader-items');

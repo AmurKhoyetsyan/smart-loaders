@@ -20,6 +20,7 @@
 | box-rotate-y        |
 | box-rotate-z        |
 | box-rectangular     |
+| box-up              |
 | heart               |
 | bubble-scale        |
 | bubble-top          |
@@ -89,7 +90,7 @@ or
                         <div data-loader="box-rectangular" size="100"></div>
                     </div>
                     <div class="item">
-                        <div data-loader size={50}></div>
+                        <div data-loader size="50"></div>
                     </div>
                     <div class="item">
                         <div data-loader></div>
