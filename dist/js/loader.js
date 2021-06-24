@@ -9,6 +9,9 @@
  */
 
 ;(function(){
+    /**
+     * @type {{ekvalayzer: string, bubbleScale: string, bubblePing: string, spinnerCub: string, rectangularPing: string, heart: string, spinnerCircle: string, bubbleTop: string, bubbleSpin: string, hourglass: string, boxRectangular: string, boxRotateZ: string, boxRotateY: string, boxRotateX: string, spinnerDefault: string, boxUp: string}}
+     */
     const loaderTypes = {
         boxRotateX: "box-rotate-x",
         boxRotateY: "box-rotate-y",
@@ -28,6 +31,9 @@
         rectangularPing: "rectangular-ping"
     };
 
+    /**
+     * @type {{lightslategrey: string, darkviolet: string, bisque: string, cyan: string, darkslateblue: string, lightgrey: string, khaki: string, darkgray: string, blanchedalmond: string, saddlebrown: string, darkblue: string, lightcoral: string, moccasin: string, orangered: string, azure: string, lightgoldenrodyellow: string, skyblue: string, chartreuse: string, deepskyblue: string, mediumpurple: string, lightyellow: string, violet: string, palevioletred: string, dimgrey: string, rosybrown: string, honeydew: string, mediumblue: string, darkseagreen: string, limegreen: string, paleturquoise: string, burlywood: string, mediumorchid: string, papayawhip: string, silver: string, chocolate: string, lightsteelblue: string, pink: string, darkgreen: string, seashell: string, sienna: string, thistle: string, yellow: string, cornsilk: string, lightseagreen: string, blueviolet: string, tomato: string, cornflowerblue: string, gold: string, sandybrown: string, springgreen: string, crimson: string, gray: string, mediumvioletred: string, slategrey: string, darkcyan: string, ivory: string, darkmagenta: string, wheat: string, indianred: string, darkorchid: string, mintcream: string, whitesmoke: string, lightpink: string, black: string, teal: string, cadetblue: string, beige: string, darkkhaki: string, blue: string, darkslategray: string, royalblue: string, seagreen: string, purple: string, orchid: string, forestgreen: string, darksalmon: string, palegreen: string, lightslategray: string, navy: string, greenyellow: string, red: string, aqua: string, dodgerblue: string, lightblue: string, white: string, olive: string, coral: string, peachpuff: string, darkolivegreen: string, darkturquoise: string, darkgrey: string, lavender: string, gainsboro: string, lightgray: string, plum: string, tan: string, midnightblue: string, powderblue: string, dimgray: string, lemonchiffon: string, salmon: string, brown: string, lightgreen: string, goldenrod: string, steelblue: string, lightsalmon: string, darkred: string, snow: string, olivedrab: string, yellowgreen: string, indigo: string, lawngreen: string, magenta: string, aquamarine: string, floralwhite: string, antiquewhite: string, hotpink: string, turquoise: string, peru: string, fuchsia: string, aliceblue: string, firebrick: string, darkgoldenrod: string, lavenderblush: string, navajowhite: string, mediumspringgreen: string, mistyrose: string, slategray: string, darkorange: string, linen: string, slateblue: string, lightcyan: string, lightskyblue: string, mediumseagreen: string, deeppink: string, mediumturquoise: string, ghostwhite: string, green: string, lime: string, mediumaquamarine: string, oldlace: string, grey: string, orange: string, darkslategrey: string, mediumslateblue: string, maroon: string, palegoldenrod: string}}
+     */
     let colorTypes = {
         aliceblue: "#F0F8FF",
         antiquewhite: "#FAEBD7",
@@ -178,6 +184,10 @@
         yellowgreen: "#9ACD32"
     };
 
+    /**
+     * @param name
+     * @returns {*}
+     */
     const getColorByName = name => {
         let key = name.toLowerCase();
         if(colorTypes.hasOwnProperty(key)) {
@@ -187,6 +197,10 @@
         return name;
     };
 
+    /**
+     * @param rgb
+     * @returns {string}
+     */
     let rgbToHex = function (rgb) {
         let hex = Number(parseInt(rgb)).toString(16);
         if (hex.length < 2) {
@@ -195,6 +209,10 @@
         return hex;
     };
 
+    /**
+     * @param p
+     * @returns {string}
+     */
     let percentToCountForRGB = p => {
         let per = parseInt(p);
 
@@ -207,6 +225,12 @@
         return rgbToHex(count);
     };
 
+    /**
+     * @param r
+     * @param g
+     * @param b
+     * @returns {string}
+     */
     let fullColorHex = (r, g, b) => {
         let red = r.indexOf('%') === -1 ? rgbToHex(r) : percentToCountForRGB(r);
         let green = g.indexOf('%') === -1 ? rgbToHex(g) : percentToCountForRGB(g);
@@ -214,6 +238,12 @@
         return red + green + blue;
     };
 
+    /**
+     * @param h
+     * @param sat
+     * @param light
+     * @returns {string}
+     */
     let hslToHex = (h, sat, light) => {
         let s = parseInt(sat);
         let l = parseInt(light);
@@ -285,6 +315,11 @@
         return `#${r}${g}${b}`;
     }
 
+    /**
+     * @param color
+     * @param alpha
+     * @returns {string}
+     */
     let hexColorThreeDigitToSixDigit = (color, alpha) => {
         if(color.length === 4) {
             let thereHex = color.substring(1, color.length);
@@ -297,6 +332,10 @@
         return `${color}${alpha}`;
     };
 
+    /**
+     * @param str
+     * @returns {string|*}
+     */
     const trim = str => {
         str = str.split(' ').join('');
         if(str.indexOf(' ') !== -1) {
@@ -306,6 +345,11 @@
         return str;
     }
 
+    /**
+     * @param color
+     * @param alpha
+     * @returns {string|*}
+     */
     let rgbToPart = (color, alpha) => {
         if(color.indexOf("rgb") !== -1) {
             let arrBefore = color.substring(4, color.length - 1);
@@ -328,6 +372,9 @@
         return getColorByName(color) + alpha;
     };
 
+    /**
+     * @param item
+     */
     let createTitle = item => {
         if(item.hasAttribute('title')) {
             let color = item.hasAttribute('title-color') ? item.getAttribute('title-color') : "#FFFFFF";
@@ -341,6 +388,10 @@
         }
     };
 
+    /**
+     * @param count
+     * @returns {string|number}
+     */
     const getZoom = count => {
         let size = parseFloat(count);
         if(size === 0) {
@@ -351,8 +402,17 @@
         return zoom.toFixed(2);
     };
 
+    /**
+     * @param item
+     * @returns {string}
+     */
     const getBackground = item => item.hasAttribute('loader-color') ? item.getAttribute('loader-color') : "#FFFFFF";
 
+    /**
+     * @param item
+     * @param index
+     * @param classes
+     */
     const boxRotate = (item, index, classes) => {
         let cub = document.createElement('DIV');
         cub.classList.add('cub');
@@ -381,6 +441,14 @@
         createTitle(item);
     };
 
+    /**
+     * @param item
+     * @param index
+     * @param classes
+     * @param itemClasses
+     * @param start
+     * @param end
+     */
     const bubbleLoading = (item, index, classes, itemClasses, start, end) => {
         let loaderItems = document.createElement('DIV');
         loaderItems.classList.add('loader-items');
@@ -407,6 +475,13 @@
         createTitle(item);
     };
 
+    /**
+     * @param item
+     * @param index
+     * @param classes
+     * @param start
+     * @param end
+     */
     const spinnerLoading = (item, index, classes, start, end) => {
         let loaderItems = document.createElement('DIV');
         loaderItems.classList.add('loader-items');
@@ -433,6 +508,9 @@
         createTitle(item);
     };
 
+    /**
+     * @type {{ekvalayzer: ekvalayzer, bubbleScale: (function(*=, *=): void), bubblePing: (function(*=, *=): void), spinnerCub: (function(*=, *=): void), rectangularPing: rectangularPing, heart: heart, spinnerCircle: (function(*=, *=): void), bubbleTop: (function(*=, *=): void), bubbleSpin: bubbleSpin, hourglass: hourglass, boxRectangular: (function(*=, *=): void), boxRotateZ: (function(*=, *=): void), boxRotateY: (function(*=, *=): void), boxRotateX: (function(*=, *=): void), spinnerDefault: spinnerDefault, boxUp: boxUp}}
+     */
     const loaderCreate = {
         boxRotateX: (item, index) => boxRotate(item, index, 'box1'),
         boxRotateY: (item, index) => boxRotate(item, index, 'box2'),
@@ -650,6 +728,10 @@
         }
     };
 
+    /**
+     * @param type
+     * @returns {string}
+     */
     const getTypeLoader = type => {
         for(let key in loaderTypes) {
             if(loaderTypes[key] === type) {
@@ -660,19 +742,69 @@
         return "spinnerDefault";
     };
 
+    /**
+     * @param item
+     * @param index
+     */
     const createLoader = (item, index) => {
         let type = item.getAttribute('data-loader');
         let lType = getTypeLoader(type);
         loaderCreate[lType](item, index);
     };
 
-    const run = () => {
-        let loaders = document.querySelectorAll('[data-loader]');
+    let mutator = {
+        option: {
+            childList: true,
+            attributes: true,
+            characterData: true,
+            subtree: true
+        },
+        observer: null,
+        loaders: null
+    };
 
-        if(loaders) {
-            loaders.forEach((item, index) => createLoader(item, index));
+    mutator.removeAnotherLoaders = function(item) {
+        while(item.firstChild) {
+            item.removeChild(item.firstChild);
         }
     };
 
-    run();
+    mutator.disabled = function() {
+        if(!this.observer) {
+            return false;
+        }
+
+        this.observer.disconnect();
+    };
+
+    mutator.replaceLoader = function() {
+        mutator.disabled();
+
+        if(mutator.loaders) {
+            mutator.loaders.forEach((item, index) => mutator.removeAnotherLoaders(item));
+        }
+
+        mutator.start();
+    };
+
+    mutator.connect = function() {
+        this.observer = new MutationObserver(this.replaceLoader);
+
+        this.loaders = document.querySelectorAll('[data-loader]');
+    };
+
+    mutator.start = function() {
+        this.connect();
+
+        if(this.loaders) {
+            this.loaders.forEach((item, index) => createLoader(item, index));
+        }
+
+        if(this.observer) {
+            this.observer.observe(document, this.option);
+        }
+    };
+
+    mutator.start();
+
 })();
