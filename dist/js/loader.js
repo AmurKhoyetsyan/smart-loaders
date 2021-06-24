@@ -493,10 +493,10 @@
         loader.setAttribute("style", `--size: ${size}`);
 
         for(let i = start; i <= end; i++) {
-            let item = document.createElement('DIV');
-            item.classList.add('item');
-            item.setAttribute("style", `--i: ${i}; --bg: ${getBackground(item)}`);
-            loaderItems.appendChild(item);
+            let spinnerItem = document.createElement('DIV');
+            spinnerItem.classList.add('item');
+            spinnerItem.setAttribute("style", `--i: ${i}; --bg: ${getBackground(item)}`);
+            loaderItems.appendChild(spinnerItem);
         }
 
         loader.appendChild(loaderItems);
