@@ -760,16 +760,73 @@
             subtree: true
         },
         observer: null,
-        loaders: null
+        loaders: null,
+        olderLoaders: []
     };
 
+    /**
+     * @param attr
+     * @returns {string}
+     */
+    mutator.attrListString = function(attr) {
+        let str = "";
+        if(attr.length === 0) {
+            return str;
+        }
+
+        for(let item of attr) {
+            str += `${item.name}: ${item.value}; `;
+        }
+
+        return str.trim();
+    };
+
+    /**
+     * @param node1
+     * @param node2
+     * @returns {boolean}
+     */
+    mutator.equalsNode = function(node1, node2) {
+        let attr1 = node1.attributes;
+        let attr2 = node2.attributes;
+
+        let len1 = attr1.length;
+
+        if(len1 !== attr2.length) {
+            return false;
+        }
+
+        if(mutator.attrListString(attr1) !== mutator.attrListString(attr2)) {
+            return false;
+        }
+
+        return true;
+    };
+
+    mutator.equals = function() {
+        if(this.olderLoaders.length !== this.loaders.length) {
+            return false;
+        }
+
+        for(let [index, item] of this.loaders.entries()) {
+            if(!this.equalsNode(item, this.olderLoaders[index])) {
+                return false;
+            }
+        }
+
+        return true;
+    };
+
+    /**
+     * @param item
+     */
     mutator.removeAnotherLoaders = function(item) {
         while(item.firstChild) {
             item.removeChild(item.firstChild);
         }
     };
 
-    mutator.disabled = function() {
+    mutator.disconnect = function() {
         if(!this.observer) {
             return false;
         }
@@ -778,25 +835,41 @@
     };
 
     mutator.replaceLoader = function() {
-        mutator.disabled();
-
-        if(mutator.loaders) {
+        if(mutator.loaders && !mutator.equals()) {
+            mutator.disconnect();
             mutator.loaders.forEach((item, index) => mutator.removeAnotherLoaders(item));
+            mutator.addLoaders();
+            mutator.start();
         }
+    };
 
-        mutator.start();
+    /**
+     * @param nodeList
+     */
+    mutator.cloneNodeList = function(nodeList) {
+        this.olderLoaders = [];
+        nodeList.forEach((item, index) => {
+            this.olderLoaders.push(item.cloneNode(true));
+        });
+    };
+
+    mutator.addLoaders = function() {
+        let loaders = document.querySelectorAll('[data-loader]');
+        this.loaders = loaders;
+        this.cloneNodeList(loaders);
     };
 
     mutator.connect = function() {
         this.observer = new MutationObserver(this.replaceLoader);
-
-        this.loaders = document.querySelectorAll('[data-loader]');
     };
 
     mutator.start = function() {
-        this.connect();
+        if(!this.observer) {
+            this.connect();
+            this.addLoaders();
+        }
 
-        if(this.loaders) {
+        if(this.loaders.length > 0) {
             this.loaders.forEach((item, index) => createLoader(item, index));
         }
 
@@ -806,5 +879,4 @@
     };
 
     mutator.start();
-
 })();
