@@ -804,6 +804,8 @@
     };
 
     mutator.equals = function() {
+        this.loaders = document.querySelectorAll('[data-loader]');
+
         if(this.olderLoaders.length !== this.loaders.length) {
             return false;
         }
