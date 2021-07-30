@@ -31,8 +31,7 @@
 .sl-spinner3,
 .sl-spinner2,
 .sl-spinner1,
-.sl-heart1,
-.sl-bubble4 {
+.sl-heart1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -54,8 +53,7 @@
 .sl-spinner3 .sl-loader,
 .sl-spinner2 .sl-loader,
 .sl-spinner1 .sl-loader,
-.sl-heart1 .sl-loader,
-.sl-bubble4 .sl-loader {
+.sl-heart1 .sl-loader {
     width: 100px;
     -ms-zoom: var(--size);
     zoom: var(--size);
@@ -67,55 +65,6 @@
     width: 100%;
     height: 100px;
     position: relative;
-}
-
-.sl-bubble4 .sl-loader .sl-loader-items {
-    width: 100%;
-    height: 100px;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-}
-
-.sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    width: 70px;
-    -webkit-animation: sl-bubble4 1.5s ease-in infinite;
-    animation: sl-bubble4 1.5s ease-in infinite;
-}
-
-.sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader .sl-circle {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: var(--bg);
 }
 
 .sl-heart1 .sl-loader .sl-loader-items .sl-heart {
@@ -299,78 +248,6 @@
     border-radius: 50%;
     -webkit-animation: sl-hourglass 1.2s ease-in infinite;
     animation: sl-hourglass 1.2s ease-in infinite;
-}
-
-@-webkit-keyframes sl-bubble3 {
-    from {
-        width: 15px;
-        height: 15px;
-        opacity: 1;
-    }
-    to {
-        width: 80px;
-        height: 80px;
-        opacity: 0;
-    }
-}
-
-@keyframes sl-bubble3 {
-    from {
-        width: 15px;
-        height: 15px;
-        opacity: 1;
-    }
-    to {
-        width: 80px;
-        height: 80px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes sl-bubble4 {
-    from {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    45% {
-        -webkit-transform: rotate(400deg);
-        transform: rotate(400deg);
-    }
-    50% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-    95% {
-        -webkit-transform: rotate(-40deg);
-        transform: rotate(-40deg);
-    }
-    to {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-}
-
-@keyframes sl-bubble4 {
-    from {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    45% {
-        -webkit-transform: rotate(400deg);
-        transform: rotate(400deg);
-    }
-    50% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-    95% {
-        -webkit-transform: rotate(-40deg);
-        transform: rotate(-40deg);
-    }
-    to {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
 }
 
 @-webkit-keyframes sl-heart1 {
