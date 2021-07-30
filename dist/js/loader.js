@@ -33,12 +33,16 @@
 
     // "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);}"
 
+    
+
+
+
 
     const loaderStylesText = {
         boxRotateX: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-box1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box1 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box1 500ms ease infinite;animation: sl-box1 500ms ease infinite;} @-webkit-keyframes sl-box1 {to {-webkit-transform: translate(-50%, -50%) rotateX(0deg);transform: translate(-50%, -50%) rotateX(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateX(180deg);transform: translate(-50%, -50%) rotateX(180deg);}} @keyframes sl-box1 {to {-webkit-transform: translate(-50%, -50%) rotateX(0deg);transform: translate(-50%, -50%) rotateX(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateX(180deg);transform: translate(-50%, -50%) rotateX(180deg);}}",
         boxRotateY: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-box2 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box2 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box2 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;} .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;} .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);} .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box2 500ms ease infinite;animation: sl-box2 500ms ease infinite;} @-webkit-keyframes sl-box2 {to {-webkit-transform: translate(-50%, -50%) rotateY(0deg);transform: translate(-50%, -50%) rotateY(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateY(180deg);transform: translate(-50%, -50%) rotateY(180deg);}}@keyframes sl-box2 {to {-webkit-transform: translate(-50%, -50%) rotateY(0deg);transform: translate(-50%, -50%) rotateY(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateY(180deg);transform: translate(-50%, -50%) rotateY(180deg);}}",
         boxRotateZ: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-box3 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box3 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box3 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box3 500ms ease infinite;animation: sl-box3 500ms ease infinite;} @-webkit-keyframes sl-box3 {to {-webkit-transform: translate(-50%, -50%) rotateZ(0deg);transform: translate(-50%, -50%) rotateZ(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateZ(180deg);transform: translate(-50%, -50%) rotateZ(180deg);}} @keyframes sl-box3 {to {-webkit-transform: translate(-50%, -50%) rotateZ(0deg);transform: translate(-50%, -50%) rotateZ(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateZ(180deg);transform: translate(-50%, -50%) rotateZ(180deg);}}",
-        boxRectangular: "box-rectangular",
+        boxRectangular: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-box4 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box4 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box4 .sl-loader .sl-loader-items {width: 100%;height: 70px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} .sl-box4 .sl-loader .sl-loader-items .sl-rectangular {width: 10px;height: 25px;background-color: var(--bg);border-radius: 5px;-webkit-animation: sl-box4 600ms ease-in-out infinite;animation: sl-box4 600ms ease-in-out infinite;-webkit-animation-delay: calc(var(--i) * -650ms);animation-delay: calc(var(--i) * -650ms);}",
         boxUp: "box-up",
         heart: "heart",
         bubbleScale: "bubble-scale",
@@ -477,12 +481,12 @@
      * @param start
      * @param end
      */
-    const bubbleLoading = (item, index, classes, itemClasses, start, end) => {
+    const bubbleLoading = (item, index, classes, itemClasses, start, end, typeLoader) => {
         let loaderItems = document.createElement('DIV');
-        loaderItems.classList.add('loader-items');
+        loaderItems.classList.add('sl-loader-items');
 
         let loader = document.createElement('DIV');
-        loader.classList.add('loader');
+        loader.classList.add('sl-loader');
 
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
@@ -495,6 +499,12 @@
         }
 
         loader.appendChild(loaderItems);
+
+        let style = document.createElement('STYLE');
+        style.setAttribute('type', 'text/css');
+        style.innerText = loaderStylesText[typeLoader];
+
+        item.appendChild(style);
 
         let bubble = document.createElement('DIV');
         bubble.classList.add(classes);
@@ -545,10 +555,10 @@
         boxRotateZ: (item, index) => boxRotate(item, index, 'sl-box3', 'boxRotateZ'),
         boxUp: (item, index) => {
             let loaderItems = document.createElement('DIV');
-            loaderItems.classList.add('loader-items');
+            loaderItems.classList.add('sl-loader-items');
 
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
 
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
@@ -557,7 +567,7 @@
 
             for(let i = 0; i <= 4; i++) {
                 let box = document.createElement('DIV');
-                box.classList.add('item');
+                box.classList.add('sl-item');
                 box.setAttribute("style", `--i: ${i}; --shadow: ${backgroundColor}; --bga: ${rgbToPart(backgroundColor, "80")}; --bg: ${backgroundColor}`);
                 loaderItems.appendChild(box);
             }
@@ -565,7 +575,7 @@
             loader.appendChild(loaderItems);
 
             let box = document.createElement('DIV');
-            box.classList.add('box6');
+            box.classList.add('sl-box6');
             box.appendChild(loader);
             item.appendChild(box);
             createTitle(item);
@@ -681,7 +691,7 @@
             item.appendChild(ekvalayzer);
             createTitle(item);
         },
-        boxRectangular: (item, index) => bubbleLoading(item, index, 'box4', 'rectangular', 1, 5),
+        boxRectangular: (item, index) => bubbleLoading(item, index, 'sl-box4', 'sl-rectangular', 1, 5, 'boxRectangular'),
         hourglass: (item, index) => {
             let hourglassLoaderItems = document.createElement('DIV');
             hourglassLoaderItems.classList.add('loader-items');

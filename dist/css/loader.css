@@ -37,8 +37,7 @@
 .sl-bubble2,
 .sl-bubble1,
 .sl-box6,
-.sl-box5,
-.sl-box4 {
+.sl-box5 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -64,42 +63,10 @@
 .sl-bubble4 .sl-loader,
 .sl-bubble3 .sl-loader,
 .sl-box6 .sl-loader,
-.sl-box5 .sl-loader,
-.sl-box4 .sl-loader {
+.sl-box5 .sl-loader {
     width: 100px;
     -ms-zoom: var(--size);
     zoom: var(--size);
-}
-
-.sl-box4 .sl-loader .sl-loader-items {
-    width: 100%;
-    height: 70px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.sl-box4 .sl-loader .sl-loader-items .sl-rectangular {
-    width: 10px;
-    height: 25px;
-    background-color: var(--bg);
-    border-radius: 5px;
-    -webkit-animation: sl-box4 600ms ease-in-out infinite;
-    animation: sl-box4 600ms ease-in-out infinite;
-    -webkit-animation-delay: calc(var(--i) * -650ms);
-    animation-delay: calc(var(--i) * -650ms);
 }
 
 .sl-box5 .sl-loader .sl-loader-items {
@@ -131,7 +98,7 @@
 }
 
 .sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping:before,
-sl-.box5 .sl-loader .sl-loader-items .sl-rectangular-ping::before {
+.sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping::before {
     content: '';
     width: 10px;
     height: 100%;
