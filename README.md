@@ -45,15 +45,6 @@
 
 <br/>
 
-concat css file
-
-    <link rel="stylesheet" type="text/css" href="./css/loader.css" />
-    
-or
-    
-    <link rel="stylesheet" type="text/css" href="./css/loader.css" />
-
-
 concat js file
 
     <script type="text/javascript" src="js/loader.js"></script>
@@ -71,7 +62,6 @@ or
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Loader Pure JS</title>
-            <link rel="stylesheet" type="text/css" href="./css/loader.min.css" />
             <link rel="stylesheet" type="text/css" href="./css/style.css" />
         </head>
         <body>

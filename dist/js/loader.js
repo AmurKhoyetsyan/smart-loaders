@@ -32,6 +32,28 @@
     };
 
     /**
+     * @type {{ekvalayzer: string, bubbleScale: string, bubblePing: string, spinnerCub: string, rectangularPing: string, heart: string, spinnerCircle: string, bubbleTop: string, bubbleSpin: string, hourglass: string, boxRectangular: string, boxRotateZ: string, boxRotateY: string, boxRotateX: string, spinnerDefault: string, boxUp: string}}
+     */
+    const loaderStylesText = {
+        boxRotateX: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box1 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box1 500ms ease infinite;animation: sl-box1 500ms ease infinite;} @-webkit-keyframes sl-box1 {to {-webkit-transform: translate(-50%, -50%) rotateX(0deg);transform: translate(-50%, -50%) rotateX(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateX(180deg);transform: translate(-50%, -50%) rotateX(180deg);}} @keyframes sl-box1 {to {-webkit-transform: translate(-50%, -50%) rotateX(0deg);transform: translate(-50%, -50%) rotateX(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateX(180deg);transform: translate(-50%, -50%) rotateX(180deg);}}",
+        boxRotateY: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box2 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box2 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box2 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;} .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;} .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);} .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box2 500ms ease infinite;animation: sl-box2 500ms ease infinite;} @-webkit-keyframes sl-box2 {to {-webkit-transform: translate(-50%, -50%) rotateY(0deg);transform: translate(-50%, -50%) rotateY(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateY(180deg);transform: translate(-50%, -50%) rotateY(180deg);}}@keyframes sl-box2 {to {-webkit-transform: translate(-50%, -50%) rotateY(0deg);transform: translate(-50%, -50%) rotateY(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateY(180deg);transform: translate(-50%, -50%) rotateY(180deg);}}",
+        boxRotateZ: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box3 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box3 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box3 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box3 500ms ease infinite;animation: sl-box3 500ms ease infinite;} @-webkit-keyframes sl-box3 {to {-webkit-transform: translate(-50%, -50%) rotateZ(0deg);transform: translate(-50%, -50%) rotateZ(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateZ(180deg);transform: translate(-50%, -50%) rotateZ(180deg);}} @keyframes sl-box3 {to {-webkit-transform: translate(-50%, -50%) rotateZ(0deg);transform: translate(-50%, -50%) rotateZ(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateZ(180deg);transform: translate(-50%, -50%) rotateZ(180deg);}}",
+        boxRectangular: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box4 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box4 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box4 .sl-loader .sl-loader-items {width: 100%;height: 70px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} .sl-box4 .sl-loader .sl-loader-items .sl-rectangular {width: 10px;height: 25px;background-color: var(--bg);border-radius: 5px;-webkit-animation: sl-box4 600ms ease-in-out infinite;animation: sl-box4 600ms ease-in-out infinite;-webkit-animation-delay: calc(var(--i) * -650ms);animation-delay: calc(var(--i) * -650ms);} @-webkit-keyframes sl-box4 {from {height: 30px;}50% {height: 60px;}to {height: 30px;}} @keyframes sl-box4 {from {height: 30px;}50% {height: 60px; }to {height: 30px;}}",
+        boxUp: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box6 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box6 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box6 .sl-loader .sl-loader-items {width: 100%;height: 100px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;} .sl-box6 .sl-loader .sl-loader-items .sl-item {width: 10px;height: 10px;margin-left: 0.25rem;margin-right: 0.25rem;position: relative;-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);background-color: #FFFFFF50;-webkit-animation: sl-box6 2500ms ease-in infinite;animation: sl-box6 2500ms ease-in infinite;-webkit-animation-delay: calc(var(--i) * 500ms);animation-delay: calc(var(--i) * 500ms);} @-webkit-keyframes sl-box6 {from {top: 0;background-color: var(--bga);-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);}10% {top: -10px;background-color: var(--bg);-webkit-box-shadow: 0 0 2px var(--shadow);box-shadow: 0 0 2px var(--shadow);}12.5% {top: -10px;background-color: var(--bg);-webkit-box-shadow: 0 0 2px var(--shadow);box-shadow: 0 0 2px var(--shadow);}22.5% {top: 0;background-color: var(--bga);-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);}to {top: 0;background-color: var(--bga);-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);}} @keyframes sl-box6 {from {top: 0;background-color: var(--bga);-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);}10% {top: -10px;background-color: var(--bg);-webkit-box-shadow: 0 0 2px var(--shadow);box-shadow: 0 0 2px var(--shadow);}12.5% {top: -10px;background-color: var(--bg);-webkit-box-shadow: 0 0 2px var(--shadow);box-shadow: 0 0 2px var(--shadow);}22.5% {top: 0;background-color: var(--bga);-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);}to {top: 0;background-color: var(--bga);-webkit-box-shadow: 0 0 5px 0 var(--shadow);box-shadow: 0 0 5px 0 var(--shadow);}}",
+        heart: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-heart1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-heart1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-heart1 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;} .sl-heart1 .sl-loader .sl-loader-items .sl-heart {width: 40px;height: 40px;border-radius: 50%;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-85%, -75%);transform: translate(-85%, -75%);background-color: var(--bg);-webkit-animation: sl-heart1 1000ms linear infinite;animation: sl-heart1 1000ms linear infinite;} .sl-heart1 .sl-loader .sl-loader-items .sl-heart::after {content: '';width: 100%;height: 100%;border-radius: 50%;position: absolute;left: 30px;top: 0;background-color: var(--bg);} .sl-heart1 .sl-loader .sl-loader-items .sl-heart::before {content: '';width: 100%;height: 100%;-webkit-transform: rotate(45deg);transform: rotate(45deg);position: absolute;left: 15px;top: 15px;background-color: var(--bg);} @-webkit-keyframes sl-heart1 {to {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}30% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}60% {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}80% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}from {-webkit-transform: translate(-85%, -75%) scale(1);transform: translate(-85%, -75%) scale(1);}} @keyframes sl-heart1 {to {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}30% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}60% {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}80% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}from {-webkit-transform: translate(-85%, -75%) scale(1);transform: translate(-85%, -75%) scale(1);}}",
+        bubbleScale: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-bubble1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble1 .sl-loader-title {padding-top: 10px;} .sl-bubble1 .sl-loader {width: 150px;height: 40px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble1 .sl-loader-items {width: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-direction: row;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-flex-pack: space-between;-webkit-box-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} .sl-bubble1 .sl-loader .sl-loader-items .sl-bubble {-webkit-animation: sl-bubble1 1200ms ease-in-out infinite;animation: sl-bubble1 1200ms ease-in-out infinite;} .sl-bubble1 .sl-loader .sl-loader-items .sl-bubble {width: 30px;height: 30px;background-color: var(--bg);border-radius: 100%;-webkit-animation-delay: calc(var(--i) * -350ms);animation-delay: calc(var(--i) * -350ms);} @-webkit-keyframes sl-bubble1 {to {-webkit-transform: scale(1, 1);transform: scale(1, 1);}50% {-webkit-transform: scale(0.3, 0.3);transform: scale(0.3, 0.3);}from {-webkit-transform: scale(1, 1);transform: scale(1, 1);}} @keyframes sl-bubble1 {to {-webkit-transform: scale(1, 1);transform: scale(1, 1);}50% {-webkit-transform: scale(0.3, 0.3);transform: scale(0.3, 0.3);}from {-webkit-transform: scale(1, 1);transform: scale(1, 1);}}",
+        bubbleTop: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-bubble2 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble2 .sl-loader-title {padding-top: 10px;} .sl-bubble2 .sl-loader {width: 150px;height: 40px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble2 .sl-loader-items {width: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-direction: row;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-flex-pack: space-between;-webkit-box-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} .sl-bubble2 .sl-loader .sl-loader-items .sl-bubble {-webkit-animation: sl-bubble2 1200ms ease-in-out infinite;animation: sl-bubble2 1200ms ease-in-out infinite;} .sl-bubble2 .sl-loader .sl-loader-items .sl-bubble {width: 30px;height: 30px;background-color: var(--bg);border-radius: 100%;-webkit-animation-delay: calc(var(--i) * -350ms);animation-delay: calc(var(--i) * -350ms);} @-webkit-keyframes sl-bubble2 {to {-webkit-transform: translateY(0);transform: translateY(0);}50% {-webkit-transform: translateY(-30px);transform: translateY(-30px);}from {-webkit-transform: translateY(0);transform: translateY(0);}} @keyframes sl-bubble2 {to {-webkit-transform: translateY(0);transform: translateY(0);}50% {-webkit-transform: translateY(-30px);transform: translateY(-30px);}from {-webkit-transform: translateY(0);transform: translateY(0);}}",
+        bubblePing: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-bubble3 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble3 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble3 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;} .sl-bubble3 .sl-loader .sl-loader-items .sl-bubble {width: 0;height: 0;position: absolute;top: 50%;left: 50%;background-color: var(--bg);border-radius: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);-webkit-animation: sl-bubble3 1200ms linear infinite;animation: sl-bubble3 1200ms linear infinite;-webkit-animation-delay: calc(var(--i) * -400ms);animation-delay: calc(var(--i) * -400ms);} @-webkit-keyframes sl-bubble3 {from {width: 15px;height: 15px;opacity: 1;}to {width: 80px;height: 80px;opacity: 0;}} @keyframes sl-bubble3 {from {width: 15px;height: 15px;opacity: 1;}to {width: 80px;height: 80px;opacity: 0;}}",
+        bubbleSpin: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-bubble4 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble4 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble4 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;} .sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;width: 70px;-webkit-animation: sl-bubble4 1.5s ease-in infinite;animation: sl-bubble4 1.5s ease-in infinite;} .sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader .sl-circle {width: 14px;height: 14px;border-radius: 50%;background-color: var(--bg);} @-webkit-keyframes sl-bubble4 {from {-webkit-transform: rotate(0);transform: rotate(0);}45% {-webkit-transform: rotate(400deg);transform: rotate(400deg);}50% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}95% {-webkit-transform: rotate(-40deg);transform: rotate(-40deg);}to {-webkit-transform: rotate(0);transform: rotate(0);}} @keyframes sl-bubble4 {from {-webkit-transform: rotate(0);transform: rotate(0);}45% {-webkit-transform: rotate(400deg);transform: rotate(400deg);}50% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}95% {-webkit-transform: rotate(-40deg);transform: rotate(-40deg);}to {-webkit-transform: rotate(0);transform: rotate(0);}}",
+        spinnerCub: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-spinner1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-spinner1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-spinner1 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;-webkit-transform: rotateY(180deg);transform: rotateY(180deg);} .sl-spinner1 .sl-loader .sl-loader-items .sl-item {-webkit-transform: rotate(calc(var(--i) * 30deg));transform: rotate(calc(var(--i) * 30deg));-webkit-animation: sl-spinner1 1.2s linear infinite;animation: sl-spinner1 1.2s linear infinite;-webkit-animation-delay: calc(var(--i) * -100ms);animation-delay: calc(var(--i) * -100ms);-webkit-transform-origin: 50px 50px;transform-origin: 50px 50px;} .sl-spinner1 .sl-loader .sl-loader-items .sl-item::after {content: '';display: block;position: absolute;top: 3px;left: 47px;width: 7px;height: 21px;background-color: var(--bg);border-radius: 20%;-webkit-box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.2);box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.2);} @-webkit-keyframes sl-spinner1 {to {opacity: 0;}from {opacity: 1;}} @keyframes sl-spinner1 {to {opacity: 0;}from {opacity: 1;}}",
+        spinnerCircle: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-spinner2 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-spinner2 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-spinner2 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;} .sl-spinner2 .sl-loader .sl-loader-items .sl-item {-webkit-transform: rotate(calc(var(--i) * 45deg));transform: rotate(calc(var(--i) * 45deg));-webkit-transform-origin: 50px 50px;transform-origin: 50px 50px;} .sl-spinner2 .sl-loader .sl-loader-items .sl-item::after {content: '';display: block;position: absolute;top: 25px;left: 25px;width: 10px;height: 10px;background-color: var(--bg);border-radius: 50%;-webkit-animation: sl-spinner2 800ms linear infinite;animation: sl-spinner2 800ms linear infinite;-webkit-animation-delay: calc(var(--i) * 100ms);animation-delay: calc(var(--i) * 100ms);} @-webkit-keyframes sl-spinner2 {to {-webkit-transform: scale(1, 1);transform: scale(1, 1);}from {-webkit-transform: scale(1.5, 1.5);transform: scale(1.5, 1.5);}} @keyframes sl-spinner2 {to {-webkit-transform: scale(1, 1);transform: scale(1, 1);}from {-webkit-transform: scale(1.5, 1.5);transform: scale(1.5, 1.5);}}",
+        spinnerDefault: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-spinner3 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-spinner3 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-spinner3 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;} .sl-spinner3 .sl-loader .sl-loader-items .sl-circle {width: 80px;height: 80px;border-radius: 50%;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);border: 10px solid var(--border);border-top: 10px solid var(--bg);-webkit-animation: sl-spinner3 800ms linear infinite;animation: sl-spinner3 800ms linear infinite;} @-webkit-keyframes sl-spinner3 {to {-webkit-transform: translate(-50%, -50%) rotate(360deg);transform: translate(-50%, -50%) rotate(360deg);}from {-webkit-transform: translate(-50%, -50%) rotate(0deg);transform: translate(-50%, -50%) rotate(0deg);}} @keyframes sl-spinner3 {to {-webkit-transform: translate(-50%, -50%) rotate(360deg);transform: translate(-50%, -50%) rotate(360deg);}from {-webkit-transform: translate(-50%, -50%) rotate(0deg);transform: translate(-50%, -50%) rotate(0deg);}}",
+        ekvalayzer: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-ekvalayzer {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-ekvalayzer .sl-loader-items {width: 100%;height: 100px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-zoom: var(--size);zoom: var(--size);} .sl-ekvalayzer .sl-loader-items .sl-parent-rectangular {padding: 3px;width: -webkit-min-content;width: -moz-min-content;width: min-content;height: -webkit-min-content;height: -moz-min-content;height: min-content;} .sl-ekvalayzer .sl-loader-items .sl-parent-rectangular .sl-rectangular {width: 10px;background-color: var(--bg);-webkit-box-shadow: 0 0 10px 2px var(--bg);box-shadow: 0 0 10px 2px var(--bg);-webkit-animation: sl-ekvalayzer1 500ms ease-in-out infinite;animation: sl-ekvalayzer1 500ms ease-in-out infinite;-webkit-animation-delay: calc(var(--i) * -100ms);animation-delay: calc(var(--i) * -100ms);} @-webkit-keyframes sl-ekvalayzer1 {from {height: calc(var(--w) * 20px);}50% {height: 80px;}to {height: calc(var(--w) * 20px);}} @keyframes sl-ekvalayzer1 {from {height: calc(var(--w) * 20px);}50% {height: 80px;}to {height: calc(var(--w) * 20px);}}",
+        hourglass: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-hourglass {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-hourglass {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-hourglass .sl-loader-items {width: 100%;height: 100px;position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-zoom: var(--size);zoom: var(--size);} .sl-hourglass .sl-loader-items .sl-hourglass-item {border: 30px solid transparent;border-top-color: var(--bg);border-bottom-color: var(--bg);border-radius: 50%;-webkit-animation: sl-hourglass 1.2s ease-in infinite;animation: sl-hourglass 1.2s ease-in infinite;} @-webkit-keyframes sl-hourglass {from {-webkit-transform: rotate(0);transform: rotate(0);}45% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}80% {-webkit-transform: rotate(900deg);transform: rotate(900deg);}to {-webkit-transform: rotate(1080deg);transform: rotate(1080deg);}} @keyframes sl-hourglass {from {-webkit-transform: rotate(0);transform: rotate(0);}45% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}80% {-webkit-transform: rotate(900deg);transform: rotate(900deg);}to {-webkit-transform: rotate(1080deg);transform: rotate(1080deg);}}",
+        rectangularPing: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box5 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box5 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box5 .sl-loader .sl-loader-items {width: 100%;height: 100px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} .sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping {width: 100%;height: 5px;position: relative;background-color: var(--bg);overflow: hidden;} .sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping:before, .sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping::before {content: '';width: 10px;height: 100%;position: absolute;top: 0;background-color: var(--bgb);-webkit-animation: sl-rectangular-ping 800ms ease-in infinite;animation: sl-rectangular-ping 800ms ease-in infinite;} @-webkit-keyframes sl-rectangular-ping {from {left: -10px;}to {left: calc(100% + 10px);}} @keyframes sl-rectangular-ping {from {left: -10px;}to {left: calc(100% + 10px);}}"
+    };
+
+    /**
      * @type {{lightslategrey: string, darkviolet: string, bisque: string, cyan: string, darkslateblue: string, lightgrey: string, khaki: string, darkgray: string, blanchedalmond: string, saddlebrown: string, darkblue: string, lightcoral: string, moccasin: string, orangered: string, azure: string, lightgoldenrodyellow: string, skyblue: string, chartreuse: string, deepskyblue: string, mediumpurple: string, lightyellow: string, violet: string, palevioletred: string, dimgrey: string, rosybrown: string, honeydew: string, mediumblue: string, darkseagreen: string, limegreen: string, paleturquoise: string, burlywood: string, mediumorchid: string, papayawhip: string, silver: string, chocolate: string, lightsteelblue: string, pink: string, darkgreen: string, seashell: string, sienna: string, thistle: string, yellow: string, cornsilk: string, lightseagreen: string, blueviolet: string, tomato: string, cornflowerblue: string, gold: string, sandybrown: string, springgreen: string, crimson: string, gray: string, mediumvioletred: string, slategrey: string, darkcyan: string, ivory: string, darkmagenta: string, wheat: string, indianred: string, darkorchid: string, mintcream: string, whitesmoke: string, lightpink: string, black: string, teal: string, cadetblue: string, beige: string, darkkhaki: string, blue: string, darkslategray: string, royalblue: string, seagreen: string, purple: string, orchid: string, forestgreen: string, darksalmon: string, palegreen: string, lightslategray: string, navy: string, greenyellow: string, red: string, aqua: string, dodgerblue: string, lightblue: string, white: string, olive: string, coral: string, peachpuff: string, darkolivegreen: string, darkturquoise: string, darkgrey: string, lavender: string, gainsboro: string, lightgray: string, plum: string, tan: string, midnightblue: string, powderblue: string, dimgray: string, lemonchiffon: string, salmon: string, brown: string, lightgreen: string, goldenrod: string, steelblue: string, lightsalmon: string, darkred: string, snow: string, olivedrab: string, yellowgreen: string, indigo: string, lawngreen: string, magenta: string, aquamarine: string, floralwhite: string, antiquewhite: string, hotpink: string, turquoise: string, peru: string, fuchsia: string, aliceblue: string, firebrick: string, darkgoldenrod: string, lavenderblush: string, navajowhite: string, mediumspringgreen: string, mistyrose: string, slategray: string, darkorange: string, linen: string, slateblue: string, lightcyan: string, lightskyblue: string, mediumseagreen: string, deeppink: string, mediumturquoise: string, ghostwhite: string, green: string, lime: string, mediumaquamarine: string, oldlace: string, grey: string, orange: string, darkslategrey: string, mediumslateblue: string, maroon: string, palegoldenrod: string}}
      */
     let colorTypes = {
@@ -379,7 +401,7 @@
         if(item.hasAttribute('title')) {
             let color = item.hasAttribute('title-color') ? item.getAttribute('title-color') : "#FFFFFF";
             let loaderTitle = document.createElement('DIV');
-            loaderTitle.classList.add('loader-title');
+            loaderTitle.classList.add('sl-loader-title');
             loaderTitle.setAttribute("style", `--cl: ${color}`);
             let span = document.createElement('SPAN');
             span.innerText = item.getAttribute('title');
@@ -412,20 +434,21 @@
      * @param item
      * @param index
      * @param classes
+     * @param typeLoader
      */
-    const boxRotate = (item, index, classes) => {
+    const boxRotate = (item, index, classes, typeLoader) => {
         let cub = document.createElement('DIV');
-        cub.classList.add('cub');
+        cub.classList.add('sl-cub');
         cub.setAttribute("style", `--bg: ${getBackground(item)}`);
 
         let parentCub = document.createElement('DIV');
-        parentCub.classList.add('parent-cub');
+        parentCub.classList.add('sl-parent-cub');
 
         let loaderItems = document.createElement('DIV');
-        loaderItems.classList.add('loader-items');
+        loaderItems.classList.add('sl-loader-items');
 
         let loader = document.createElement('DIV');
-        loader.classList.add('loader');
+        loader.classList.add('sl-loader');
 
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
@@ -437,6 +460,12 @@
         let box = document.createElement('DIV');
         box.classList.add(classes);
         box.appendChild(loader);
+
+        let style = document.createElement('STYLE');
+        style.setAttribute('type', 'text/css');
+        style.innerText = loaderStylesText[typeLoader];
+
+        item.appendChild(style);
         item.appendChild(box);
         createTitle(item);
     };
@@ -448,13 +477,14 @@
      * @param itemClasses
      * @param start
      * @param end
+     * @param typeLoader
      */
-    const bubbleLoading = (item, index, classes, itemClasses, start, end) => {
+    const bubbleLoading = (item, index, classes, itemClasses, start, end, typeLoader) => {
         let loaderItems = document.createElement('DIV');
-        loaderItems.classList.add('loader-items');
+        loaderItems.classList.add('sl-loader-items');
 
         let loader = document.createElement('DIV');
-        loader.classList.add('loader');
+        loader.classList.add('sl-loader');
 
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
@@ -467,6 +497,12 @@
         }
 
         loader.appendChild(loaderItems);
+
+        let style = document.createElement('STYLE');
+        style.setAttribute('type', 'text/css');
+        style.innerText = loaderStylesText[typeLoader];
+
+        item.appendChild(style);
 
         let bubble = document.createElement('DIV');
         bubble.classList.add(classes);
@@ -481,25 +517,32 @@
      * @param classes
      * @param start
      * @param end
+     * @param typeLoader
      */
-    const spinnerLoading = (item, index, classes, start, end) => {
+    const spinnerLoading = (item, index, classes, start, end, typeLoader) => {
         let loaderItems = document.createElement('DIV');
-        loaderItems.classList.add('loader-items');
+        loaderItems.classList.add('sl-loader-items');
 
         let loader = document.createElement('DIV');
-        loader.classList.add('loader');
+        loader.classList.add('sl-loader');
 
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
 
         for(let i = start; i <= end; i++) {
             let spinnerItem = document.createElement('DIV');
-            spinnerItem.classList.add('item');
+            spinnerItem.classList.add('sl-item');
             spinnerItem.setAttribute("style", `--i: ${i}; --bg: ${getBackground(item)}`);
             loaderItems.appendChild(spinnerItem);
         }
 
         loader.appendChild(loaderItems);
+
+        let style = document.createElement('STYLE');
+        style.setAttribute('type', 'text/css');
+        style.innerText = loaderStylesText[typeLoader];
+
+        item.appendChild(style);
 
         let spinner = document.createElement('DIV');
         spinner.classList.add(classes);
@@ -512,15 +555,15 @@
      * @type {{ekvalayzer: ekvalayzer, bubbleScale: (function(*=, *=): void), bubblePing: (function(*=, *=): void), spinnerCub: (function(*=, *=): void), rectangularPing: rectangularPing, heart: heart, spinnerCircle: (function(*=, *=): void), bubbleTop: (function(*=, *=): void), bubbleSpin: bubbleSpin, hourglass: hourglass, boxRectangular: (function(*=, *=): void), boxRotateZ: (function(*=, *=): void), boxRotateY: (function(*=, *=): void), boxRotateX: (function(*=, *=): void), spinnerDefault: spinnerDefault, boxUp: boxUp}}
      */
     const loaderCreate = {
-        boxRotateX: (item, index) => boxRotate(item, index, 'box1'),
-        boxRotateY: (item, index) => boxRotate(item, index, 'box2'),
-        boxRotateZ: (item, index) => boxRotate(item, index, 'box3'),
+        boxRotateX: (item, index) => boxRotate(item, index, 'sl-box1', 'boxRotateX'),
+        boxRotateY: (item, index) => boxRotate(item, index, 'sl-box2', 'boxRotateY'),
+        boxRotateZ: (item, index) => boxRotate(item, index, 'sl-box3', 'boxRotateZ'),
         boxUp: (item, index) => {
             let loaderItems = document.createElement('DIV');
-            loaderItems.classList.add('loader-items');
+            loaderItems.classList.add('sl-loader-items');
 
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
 
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
@@ -529,77 +572,95 @@
 
             for(let i = 0; i <= 4; i++) {
                 let box = document.createElement('DIV');
-                box.classList.add('item');
+                box.classList.add('sl-item');
                 box.setAttribute("style", `--i: ${i}; --shadow: ${backgroundColor}; --bga: ${rgbToPart(backgroundColor, "80")}; --bg: ${backgroundColor}`);
                 loaderItems.appendChild(box);
             }
 
             loader.appendChild(loaderItems);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["boxUp"];
+
+            item.appendChild(style);
+
             let box = document.createElement('DIV');
-            box.classList.add('box6');
+            box.classList.add('sl-box6');
             box.appendChild(loader);
             item.appendChild(box);
             createTitle(item);
         },
         heart: (item, index) => {
             let loaderItems = document.createElement('DIV');
-            loaderItems.classList.add('loader-items');
+            loaderItems.classList.add('sl-loader-items');
 
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
 
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
 
             let heart = document.createElement('DIV');
-            heart.classList.add('heart');
+            heart.classList.add('sl-heart');
             heart.setAttribute("style", `--bg: ${getBackground(item)}`);
 
             loaderItems.appendChild(heart);
             loader.appendChild(loaderItems);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["heart"];
+
+            item.appendChild(style);
+
             let heart1 = document.createElement('DIV');
-            heart1.classList.add('heart1');
+            heart1.classList.add('sl-heart1');
             heart1.appendChild(loader);
             item.appendChild(heart1);
             createTitle(item);
         },
-        bubbleScale: (item, index) => bubbleLoading(item, index, 'bubble1', 'bubble', 1, 3),
-        spinnerCub: (item, index) => spinnerLoading(item, index, 'spinner1', 1, 12),
-        spinnerCircle: (item, index) => spinnerLoading(item, index, 'spinner2', 0, 7),
+        bubbleScale: (item, index) => bubbleLoading(item, index, 'sl-bubble1', 'sl-bubble', 1, 3, 'bubbleScale'),
+        spinnerCub: (item, index) => spinnerLoading(item, index, 'sl-spinner1', 1, 12, 'spinnerCub'),
+        spinnerCircle: (item, index) => spinnerLoading(item, index, 'sl-spinner2', 0, 7, 'spinnerCircle'),
         spinnerDefault: (item, index) => {
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
 
             let loaderParent = document.createElement('DIV');
-            loaderParent.classList.add('loader-items');
+            loaderParent.classList.add('sl-loader-items');
 
             let backgroundColor = getBackground(item);
 
             let circle = document.createElement('DIV');
-            circle.classList.add('circle');
+            circle.classList.add('sl-circle');
             circle.setAttribute("style", `--border: ${rgbToPart(backgroundColor, "50")}; --bg: ${backgroundColor}`);
             loaderParent.appendChild(circle);
 
             loader.appendChild(loaderParent);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["spinnerDefault"];
+
+            item.appendChild(style);
+
             let spinner = document.createElement('DIV');
-            spinner.classList.add('spinner3');
+            spinner.classList.add('sl-spinner3');
             spinner.appendChild(loader);
             item.appendChild(spinner);
             createTitle(item);
         },
-        bubbleTop: (item, index) => bubbleLoading(item, index, 'bubble2', 'bubble',  1, 3),
-        bubblePing: (item, index) => bubbleLoading(item, index, 'bubble3', 'bubble',  1, 3),
+        bubbleTop: (item, index) => bubbleLoading(item, index, 'sl-bubble2', 'sl-bubble',  1, 3, 'bubbleTop'),
+        bubblePing: (item, index) => bubbleLoading(item, index, 'sl-bubble3', 'sl-bubble',  1, 3, 'bubblePing'),
         ekvalayzer: (item, index) => {
             let loaderItems = document.createElement('DIV');
-            loaderItems.classList.add('loader-items');
+            loaderItems.classList.add('sl-loader-items');
 
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
 
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
@@ -637,9 +698,9 @@
 
             step.map(stepItem => {
                 let parentRectangular = document.createElement('DIV');
-                parentRectangular.classList.add('parent-rectangular');
+                parentRectangular.classList.add('sl-parent-rectangular');
                 let rectangular = document.createElement('DIV');
-                rectangular.classList.add('rectangular');
+                rectangular.classList.add('sl-rectangular');
                 rectangular.setAttribute("style", `--w: ${stepItem.w}; --i: ${stepItem.i}; --bg: ${getBackground(item)}`);
                 parentRectangular.appendChild(rectangular)
                 loaderItems.appendChild(parentRectangular);
@@ -647,27 +708,39 @@
 
             loader.appendChild(loaderItems);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["ekvalayzer"];
+
+            item.appendChild(style);
+
             let ekvalayzer = document.createElement('DIV');
-            ekvalayzer.classList.add('ekvalayzer');
+            ekvalayzer.classList.add('sl-ekvalayzer');
             ekvalayzer.appendChild(loader);
             item.appendChild(ekvalayzer);
             createTitle(item);
         },
-        boxRectangular: (item, index) => bubbleLoading(item, index, 'box4', 'rectangular', 1, 5),
+        boxRectangular: (item, index) => bubbleLoading(item, index, 'sl-box4', 'sl-rectangular', 1, 5, 'boxRectangular'),
         hourglass: (item, index) => {
             let hourglassLoaderItems = document.createElement('DIV');
-            hourglassLoaderItems.classList.add('loader-items');
+            hourglassLoaderItems.classList.add('sl-loader-items');
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             hourglassLoaderItems.setAttribute("style", `--size: ${size}`);
 
             let hourglassItem = document.createElement('DIV');
-            hourglassItem.classList.add('hourglass-item');
+            hourglassItem.classList.add('sl-hourglass-item');
             hourglassItem.setAttribute("style", `--bg: ${getBackground(item)}; --size: ${size}`);
 
             hourglassLoaderItems.appendChild(hourglassItem);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["hourglass"];
+
+            item.appendChild(style);
+
             let hourglass = document.createElement('DIV');
-            hourglass.classList.add('hourglass');
+            hourglass.classList.add('sl-hourglass');
             hourglass.appendChild(hourglassLoaderItems);
 
             item.appendChild(hourglass);
@@ -675,20 +748,20 @@
         },
         bubbleSpin: (item, index) => {
             let itemContentLoader = document.createElement('DIV');
-            itemContentLoader.classList.add('item-content-loader');
+            itemContentLoader.classList.add('sl-item-content-loader');
 
             let loaderItems = document.createElement('DIV');
-            loaderItems.classList.add('loader-items');
+            loaderItems.classList.add('sl-loader-items');
 
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
 
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
 
             for(let i = 1; i <= 3; i++) {
                 let circle = document.createElement('DIV');
-                circle.classList.add('circle');
+                circle.classList.add('sl-circle');
                 circle.setAttribute("style", `--bg: ${getBackground(item)}`);
                 itemContentLoader.appendChild(circle);
             }
@@ -696,32 +769,44 @@
             loaderItems.appendChild(itemContentLoader);
             loader.appendChild(loaderItems);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["bubbleSpin"];
+
+            item.appendChild(style);
+
             let bubble = document.createElement('DIV');
-            bubble.classList.add('bubble4');
+            bubble.classList.add('sl-bubble4');
             bubble.appendChild(loader);
             item.appendChild(bubble);
             createTitle(item);
         },
         rectangularPing: (item, index) =>{
             let loader = document.createElement('DIV');
-            loader.classList.add('loader');
+            loader.classList.add('sl-loader');
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
 
             let loaderItems = document.createElement('DIV');
-            loaderItems.classList.add('loader-items');
+            loaderItems.classList.add('sl-loader-items');
 
             let backgroundColor = getBackground(item);
 
             let rectangularPing = document.createElement('DIV');
-            rectangularPing.classList.add('rectangular-ping');
+            rectangularPing.classList.add('sl-rectangular-ping');
             rectangularPing.setAttribute("style", `--bg: ${rgbToPart(backgroundColor, "50")}; --bgb: ${backgroundColor}`);
 
             loaderItems.appendChild(rectangularPing);
             loader.appendChild(loaderItems);
 
+            let style = document.createElement('STYLE');
+            style.setAttribute('type', 'text/css');
+            style.innerText = loaderStylesText["rectangularPing"];
+
+            item.appendChild(style);
+
             let box = document.createElement('DIV');
-            box.classList.add('box5');
+            box.classList.add('sl-box5');
             box.appendChild(loader);
             item.appendChild(box);
             createTitle(item);
