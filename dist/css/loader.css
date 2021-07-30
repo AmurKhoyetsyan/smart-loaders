@@ -26,8 +26,7 @@
 }
 
 [data-loader],
-.sl-hourglass,
-.sl-ekvalayzer {
+.sl-hourglass {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -45,75 +44,10 @@
     justify-content: center;
 }
 
-.sl-hourglass,
-.sl-spinner3 .sl-loader {
+.sl-hourglass {
     width: 100px;
     -ms-zoom: var(--size);
     zoom: var(--size);
-}
-
-.sl-spinner3 .sl-loader .sl-loader-items {
-    width: 100%;
-    height: 100px;
-    position: relative;
-}
-
-.sl-spinner3 .sl-loader .sl-loader-items .sl-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border: 10px solid var(--border);
-    border-top: 10px solid var(--bg);
-    -webkit-animation: sl-spinner3 800ms linear infinite;
-    animation: sl-spinner3 800ms linear infinite;
-}
-
-.sl-ekvalayzer .sl-loader-items {
-    width: 100%;
-    height: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -ms-zoom: var(--size);
-    zoom: var(--size);
-}
-
-.sl-ekvalayzer .sl-loader-items .sl-parent-rectangular {
-    padding: 3px;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
-}
-
-.sl-ekvalayzer .sl-loader-items .sl-parent-rectangular .sl-rectangular {
-    width: 10px;
-    background-color: var(--bg);
-    -webkit-box-shadow: 0 0 10px 2px var(--bg);
-    box-shadow: 0 0 10px 2px var(--bg);
-    -webkit-animation: sl-ekvalayzer1 500ms ease-in-out infinite;
-    animation: sl-ekvalayzer1 500ms ease-in-out infinite;
-    -webkit-animation-delay: calc(var(--i) * -100ms);
-    animation-delay: calc(var(--i) * -100ms);
 }
 
 .sl-hourglass .sl-loader-items {
@@ -146,52 +80,6 @@
     border-radius: 50%;
     -webkit-animation: sl-hourglass 1.2s ease-in infinite;
     animation: sl-hourglass 1.2s ease-in infinite;
-}
-
-@-webkit-keyframes sl-spinner3 {
-    to {
-        -webkit-transform: translate(-50%, -50%) rotate(360deg);
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-    from {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-}
-
-@keyframes sl-spinner3 {
-    to {
-        -webkit-transform: translate(-50%, -50%) rotate(360deg);
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-    from {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-}
-
-@-webkit-keyframes sl-ekvalayzer1 {
-    from {
-        height: calc(var(--w) * 20px);
-    }
-    50% {
-        height: 80px;
-    }
-    to {
-        height: calc(var(--w) * 20px);
-    }
-}
-
-@keyframes sl-ekvalayzer1 {
-    from {
-        height: calc(var(--w) * 20px);
-    }
-    50% {
-        height: 80px;
-    }
-    to {
-        height: calc(var(--w) * 20px);
-    }
 }
 
 @-webkit-keyframes sl-hourglass {
