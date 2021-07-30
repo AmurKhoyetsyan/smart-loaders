@@ -33,8 +33,7 @@
 
     // "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);}"
 
-    // "{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}"
-
+    
     
     
 
@@ -51,7 +50,7 @@
         bubbleTop: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-bubble2 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble2 .sl-loader-title {padding-top: 10px;} .sl-bubble2 .sl-loader {width: 150px;height: 40px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble2 .sl-loader-items {width: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-direction: row;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-ms-flex-pack: space-between;-webkit-box-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} .sl-bubble2 .sl-loader .sl-loader-items .sl-bubble {-webkit-animation: sl-bubble2 1200ms ease-in-out infinite;animation: sl-bubble2 1200ms ease-in-out infinite;} .sl-bubble2 .sl-loader .sl-loader-items .sl-bubble {width: 30px;height: 30px;background-color: var(--bg);border-radius: 100%;-webkit-animation-delay: calc(var(--i) * -350ms);animation-delay: calc(var(--i) * -350ms);} @-webkit-keyframes sl-bubble2 {to {-webkit-transform: translateY(0);transform: translateY(0);}50% {-webkit-transform: translateY(-30px);transform: translateY(-30px);}from {-webkit-transform: translateY(0);transform: translateY(0);}} @keyframes sl-bubble2 {to {-webkit-transform: translateY(0);transform: translateY(0);}50% {-webkit-transform: translateY(-30px);transform: translateY(-30px);}from {-webkit-transform: translateY(0);transform: translateY(0);}}",
         bubblePing: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-bubble3 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble3 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble3 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;} .sl-bubble3 .sl-loader .sl-loader-items .sl-bubble {width: 0;height: 0;position: absolute;top: 50%;left: 50%;background-color: var(--bg);border-radius: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);-webkit-animation: sl-bubble3 1200ms linear infinite;animation: sl-bubble3 1200ms linear infinite;-webkit-animation-delay: calc(var(--i) * -400ms);animation-delay: calc(var(--i) * -400ms);} @-webkit-keyframes sl-bubble3 {from {width: 15px;height: 15px;opacity: 1;}to {width: 80px;height: 80px;opacity: 0;}} @keyframes sl-bubble3 {from {width: 15px;height: 15px;opacity: 1;}to {width: 80px;height: 80px;opacity: 0;}}",
         bubbleSpin: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-bubble4 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-bubble4 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-bubble4 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;} .sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: nowrap;flex-wrap: nowrap;width: 70px;-webkit-animation: sl-bubble4 1.5s ease-in infinite;animation: sl-bubble4 1.5s ease-in infinite;} .sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader .sl-circle {width: 14px;height: 14px;border-radius: 50%;background-color: var(--bg);} @-webkit-keyframes sl-bubble4 {from {-webkit-transform: rotate(0);transform: rotate(0);}45% {-webkit-transform: rotate(400deg);transform: rotate(400deg);}50% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}95% {-webkit-transform: rotate(-40deg);transform: rotate(-40deg);}to {-webkit-transform: rotate(0);transform: rotate(0);}} @keyframes sl-bubble4 {from {-webkit-transform: rotate(0);transform: rotate(0);}45% {-webkit-transform: rotate(400deg);transform: rotate(400deg);}50% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}95% {-webkit-transform: rotate(-40deg);transform: rotate(-40deg);}to {-webkit-transform: rotate(0);transform: rotate(0);}}",
-        spinnerCub: "spinner-cub",
+        spinnerCub: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-spinner1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-spinner1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-spinner1 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;-webkit-transform: rotateY(180deg);transform: rotateY(180deg);} .sl-spinner1 .sl-loader .sl-loader-items .sl-item {-webkit-transform: rotate(calc(var(--i) * 30deg));transform: rotate(calc(var(--i) * 30deg));-webkit-animation: sl-spinner1 1.2s linear infinite;animation: sl-spinner1 1.2s linear infinite;-webkit-animation-delay: calc(var(--i) * -100ms);animation-delay: calc(var(--i) * -100ms);-webkit-transform-origin: 50px 50px;transform-origin: 50px 50px;} .sl-spinner1 .sl-loader .sl-loader-items .sl-item::after {content: '';display: block;position: absolute;top: 3px;left: 47px;width: 7px;height: 21px;background-color: var(--bg);border-radius: 20%;-webkit-box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.2);box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.2);} @-webkit-keyframes sl-spinner1 {to {opacity: 0;}from {opacity: 1;}} @keyframes sl-spinner1 {to {opacity: 0;}from {opacity: 1;}}",
         spinnerCircle: "spinner-circle",
         spinnerDefault: "spinner-default",
         ekvalayzer: "ekvalayzer",
@@ -522,24 +521,30 @@
      * @param start
      * @param end
      */
-    const spinnerLoading = (item, index, classes, start, end) => {
+    const spinnerLoading = (item, index, classes, start, end, typeLoader) => {
         let loaderItems = document.createElement('DIV');
-        loaderItems.classList.add('loader-items');
+        loaderItems.classList.add('sl-loader-items');
 
         let loader = document.createElement('DIV');
-        loader.classList.add('loader');
+        loader.classList.add('sl-loader');
 
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
 
         for(let i = start; i <= end; i++) {
             let spinnerItem = document.createElement('DIV');
-            spinnerItem.classList.add('item');
+            spinnerItem.classList.add('sl-item');
             spinnerItem.setAttribute("style", `--i: ${i}; --bg: ${getBackground(item)}`);
             loaderItems.appendChild(spinnerItem);
         }
 
         loader.appendChild(loaderItems);
+
+        let style = document.createElement('STYLE');
+        style.setAttribute('type', 'text/css');
+        style.innerText = loaderStylesText[typeLoader];
+
+        item.appendChild(style);
 
         let spinner = document.createElement('DIV');
         spinner.classList.add(classes);
@@ -618,7 +623,7 @@
             createTitle(item);
         },
         bubbleScale: (item, index) => bubbleLoading(item, index, 'sl-bubble1', 'sl-bubble', 1, 3, 'bubbleScale'),
-        spinnerCub: (item, index) => spinnerLoading(item, index, 'sl-spinner1', 1, 12),
+        spinnerCub: (item, index) => spinnerLoading(item, index, 'sl-spinner1', 1, 12, 'spinnerCub'),
         spinnerCircle: (item, index) => spinnerLoading(item, index, 'sl-spinner2', 0, 7),
         spinnerDefault: (item, index) => {
             let loader = document.createElement('DIV');
