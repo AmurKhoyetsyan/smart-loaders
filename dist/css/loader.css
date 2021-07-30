@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 
-[data-loader] .loader-title {
+[data-loader] .sl-loader-title {
     width: 100%;
     text-align: center;
     font-size: 17px;
@@ -26,22 +26,22 @@
 }
 
 [data-loader],
-.hourglass,
-.ekvalayzer,
-.spinner3,
-.spinner2,
-.spinner1,
-.heart1,
-.bubble4,
-.bubble3,
-.bubble2,
-.bubble1,
-.box6,
-.box5,
-.box4,
-.box3,
-.box2,
-.box1 {
+.sl-hourglass,
+.sl-ekvalayzer,
+.sl-spinner3,
+.sl-spinner2,
+.sl-spinner1,
+.sl-heart1,
+.sl-bubble4,
+.sl-bubble3,
+.sl-bubble2,
+.sl-bubble1,
+.sl-box6,
+.sl-box5,
+.sl-box4,
+.sl-box3,
+.sl-box2,
+.sl-box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,27 +59,27 @@
     justify-content: center;
 }
 
-.hourglass,
-.spinner3 .loader,
-.spinner2 .loader,
-.spinner1 .loader,
-.heart1 .loader,
-.bubble4 .loader,
-.bubble3 .loader,
-.box6 .loader,
-.box5 .loader,
-.box4 .loader,
-.box3 .loader,
-.box2 .loader,
-.box1 .loader {
+.sl-hourglass,
+.sl-spinner3 .sl-loader,
+.sl-spinner2 .sl-loader,
+.sl-spinner1 .sl-loader,
+.sl-heart1 .sl-loader,
+.sl-bubble4 .sl-loader,
+.sl-bubble3 .sl-loader,
+.sl-box6 .sl-loader,
+.sl-box5 .sl-loader,
+.sl-box4 .sl-loader,
+.sl-box3 .sl-loader,
+.sl-box2 .sl-loader,
+.sl-box1 .sl-loader {
     width: 100px;
     -ms-zoom: var(--size);
     zoom: var(--size);
 }
 
-.box3 .loader .loader-items,
-.box2 .loader .loader-items,
-.box1 .loader .loader-items {
+.sl-box3 .sl-loader .sl-loader-items,
+.sl-box2 .sl-loader .sl-loader-items,
+.sl-box1 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     -webkit-perspective: 100px;
@@ -88,9 +88,9 @@
     perspective: 100px;
 }
 
-.box3 .loader .loader-items .parent-cub,
-.box2 .loader .loader-items .parent-cub,
-.box1 .loader .loader-items .parent-cub {
+.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub,
+.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub,
+.sl-box1 .sl-loader .sl-loader-items .sl-parent-cub {
     width: 100px;
     height: 100px;
     position: relative;
@@ -100,9 +100,9 @@
     transform-origin: 50% 50% -50px;
 }
 
-.box3 .loader .loader-items .parent-cub .cub,
-.box2 .loader .loader-items .parent-cub .cub,
-.box1 .loader .loader-items .parent-cub .cub {
+.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub,
+.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub,
+.sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
     width: 50px;
     height: 50px;
     top: 50%;
@@ -113,22 +113,22 @@
     background-color: var(--bg);
 }
 
-.box1 .loader .loader-items .parent-cub .cub {
-    -webkit-animation: box1 500ms ease infinite;
-    animation: box1 500ms ease infinite;
+.sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
+    -webkit-animation: sl-box1 500ms ease infinite;
+    animation: sl-box1 500ms ease infinite;
 }
 
-.box2 .loader .loader-items .parent-cub .cub {
-    -webkit-animation: box2 500ms ease infinite;
-    animation: box2 500ms ease infinite;
+.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
+    -webkit-animation: sl-box2 500ms ease infinite;
+    animation: sl-box2 500ms ease infinite;
 }
 
-.box3 .loader .loader-items .parent-cub .cub {
-    -webkit-animation: box3 500ms ease infinite;
-    animation: box3 500ms ease infinite;
+.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
+    -webkit-animation: sl-box3 500ms ease infinite;
+    animation: sl-box3 500ms ease infinite;
 }
 
-.box4 .loader .loader-items {
+.sl-box4 .sl-loader .sl-loader-items {
     width: 100%;
     height: 70px;
     display: -webkit-box;
@@ -148,18 +148,18 @@
     align-items: center;
 }
 
-.box4 .loader .loader-items .rectangular {
+.sl-box4 .sl-loader .sl-loader-items .sl-rectangular {
     width: 10px;
     height: 25px;
     background-color: var(--bg);
     border-radius: 5px;
-    -webkit-animation: box4 600ms ease-in-out infinite;
-    animation: box4 600ms ease-in-out infinite;
+    -webkit-animation: sl-box4 600ms ease-in-out infinite;
+    animation: sl-box4 600ms ease-in-out infinite;
     -webkit-animation-delay: calc(var(--i) * -650ms);
     animation-delay: calc(var(--i) * -650ms);
 }
 
-.box5 .loader .loader-items {
+.sl-box5 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     display: -webkit-box;
@@ -179,7 +179,7 @@
     align-items: center;
 }
 
-.box5 .loader .loader-items .rectangular-ping {
+.sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping {
     width: 100%;
     height: 5px;
     position: relative;
@@ -187,19 +187,19 @@
     overflow: hidden;
 }
 
-.box5 .loader .loader-items .rectangular-ping:before,
-.box5 .loader .loader-items .rectangular-ping::before {
+.sl-box5 .sl-loader .sl-loader-items .sl-rectangular-ping:before,
+sl-.box5 .sl-loader .sl-loader-items .sl-rectangular-ping::before {
     content: '';
     width: 10px;
     height: 100%;
     position: absolute;
     top: 0;
     background-color: var(--bgb);
-    -webkit-animation: rectangular-ping 800ms ease-in infinite;
-    animation: rectangular-ping 800ms ease-in infinite;
+    -webkit-animation: sl-rectangular-ping 800ms ease-in infinite;
+    animation: sl-rectangular-ping 800ms ease-in infinite;
 }
 
-.box6 .loader .loader-items {
+.sl-box6 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     display: -webkit-box;
@@ -219,7 +219,7 @@
     flex-wrap: nowrap;
 }
 
-.box6 .loader .loader-items .item {
+.sl-box6 .sl-loader .sl-loader-items .sl-item {
     width: 10px;
     height: 10px;
     margin-left: 0.25rem;
@@ -228,27 +228,27 @@
     -webkit-box-shadow: 0 0 5px 0 var(--shadow);
     box-shadow: 0 0 5px 0 var(--shadow);
     background-color: #FFFFFF50;
-    -webkit-animation: box6 2500ms ease-in infinite;
-    animation: box6 2500ms ease-in infinite;
+    -webkit-animation: sl-box6 2500ms ease-in infinite;
+    animation: sl-box6 2500ms ease-in infinite;
     -webkit-animation-delay: calc(var(--i) * 500ms);
     animation-delay: calc(var(--i) * 500ms);
 }
 
-.bubble2 .loader-title,
-.bubble1 .loader-title {
+.sl-bubble2 .sl-loader-title,
+.sl-bubble1 .sl-loader-title {
     padding-top: 10px;
 }
 
-.bubble2 .loader,
-.bubble1 .loader {
+.sl-bubble2 .sl-loader,
+.sl-bubble1 .sl-loader {
     width: 150px;
     height: 40px;
     -ms-zoom: var(--size);
     zoom: var(--size);
 }
 
-.bubble2 .loader-items,
-.bubble1 .loader-items {
+.sl-bubble2 .sl-loader-items,
+.sl-bubble1 .sl-loader-items {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -267,18 +267,18 @@
     align-items: center;
 }
 
-.bubble1 .loader .loader-items .bubble {
-    -webkit-animation: bubble1 1200ms ease-in-out infinite;
-    animation: bubble1 1200ms ease-in-out infinite;
+.sl-bubble1 .sl-loader .sl-loader-items .sl-bubble {
+    -webkit-animation: sl-bubble1 1200ms ease-in-out infinite;
+    animation: sl-bubble1 1200ms ease-in-out infinite;
 }
 
-.bubble2 .loader .loader-items .bubble {
-    -webkit-animation: bubble2 1200ms ease-in-out infinite;
-    animation: bubble2 1200ms ease-in-out infinite;
+.sl-bubble2 .sl-loader .sl-loader-items .sl-bubble {
+    -webkit-animation: sl-bubble2 1200ms ease-in-out infinite;
+    animation: sl-bubble2 1200ms ease-in-out infinite;
 }
 
-.bubble2 .loader .loader-items .bubble,
-.bubble1 .loader .loader-items .bubble {
+.sl-bubble2 .sl-loader .sl-loader-items .sl-bubble,
+.sl-bubble1 .sl-loader .sl-loader-items .sl-bubble {
     width: 30px;
     height: 30px;
     background-color: var(--bg);
@@ -287,16 +287,16 @@
     animation-delay: calc(var(--i) * -350ms);
 }
 
-.spinner3 .loader .loader-items,
-.spinner2 .loader .loader-items,
-.heart1 .loader .loader-items,
-.bubble3 .loader .loader-items {
+.sl-spinner3 .sl-loader .sl-loader-items,
+.sl-spinner2 .sl-loader .sl-loader-items,
+.sl-heart1 .sl-loader .sl-loader-items,
+.sl-bubble3 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     position: relative;
 }
 
-.bubble3 .loader .loader-items .bubble {
+.sl-bubble3 .sl-loader .sl-loader-items .sl-bubble {
     width: 0;
     height: 0;
     position: absolute;
@@ -306,13 +306,13 @@
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: bubble3 1200ms linear infinite;
-    animation: bubble3 1200ms linear infinite;
+    -webkit-animation: sl-bubble3 1200ms linear infinite;
+    animation: sl-bubble3 1200ms linear infinite;
     -webkit-animation-delay: calc(var(--i) * -400ms);
     animation-delay: calc(var(--i) * -400ms);
 }
 
-.bubble4 .loader .loader-items {
+.sl-bubble4 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     position: relative;
@@ -333,7 +333,7 @@
     flex-wrap: nowrap;
 }
 
-.bubble4 .loader .loader-items .item-content-loader {
+.sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -350,18 +350,18 @@
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 70px;
-    -webkit-animation: bubble4 1.5s ease-in infinite;
-    animation: bubble4 1.5s ease-in infinite;
+    -webkit-animation: sl-bubble4 1.5s ease-in infinite;
+    animation: sl-bubble4 1.5s ease-in infinite;
 }
 
-.bubble4 .loader .loader-items .item-content-loader .circle {
+.sl-bubble4 .sl-loader .sl-loader-items .sl-item-content-loader .sl-circle {
     width: 14px;
     height: 14px;
     border-radius: 50%;
     background-color: var(--bg);
 }
 
-.heart1 .loader .loader-items .heart {
+.sl-heart1 .sl-loader .sl-loader-items .sl-heart {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -371,11 +371,11 @@
     -webkit-transform: translate(-85%, -75%);
     transform: translate(-85%, -75%);
     background-color: var(--bg);
-    -webkit-animation: heart1 1000ms linear infinite;
-    animation: heart1 1000ms linear infinite;
+    -webkit-animation: sl-heart1 1000ms linear infinite;
+    animation: sl-heart1 1000ms linear infinite;
 }
 
-.heart1 .loader .loader-items .heart::after {
+.sl-heart1 .sl-loader .sl-loader-items .sl-heart::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -386,7 +386,7 @@
     background-color: var(--bg);
 }
 
-.heart1 .loader .loader-items .heart::before {
+.sl-heart1 .sl-loader .sl-loader-items .sl-heart::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -398,7 +398,7 @@
     background-color: var(--bg);
 }
 
-.spinner1 .loader .loader-items {
+.sl-spinner1 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     position: relative;
@@ -406,18 +406,18 @@
     transform: rotateY(180deg);
 }
 
-.spinner1 .loader .loader-items .item {
+.sl-spinner1 .sl-loader .sl-loader-items .sl-item {
     -webkit-transform: rotate(calc(var(--i) * 30deg));
     transform: rotate(calc(var(--i) * 30deg));
-    -webkit-animation: spinner1 1.2s linear infinite;
-    animation: spinner1 1.2s linear infinite;
+    -webkit-animation: sl-spinner1 1.2s linear infinite;
+    animation: sl-spinner1 1.2s linear infinite;
     -webkit-animation-delay: calc(var(--i) * -100ms);
     animation-delay: calc(var(--i) * -100ms);
     -webkit-transform-origin: 50px 50px;
     transform-origin: 50px 50px;
 }
 
-.spinner1 .loader .loader-items .item::after {
+.sl-spinner1 .sl-loader .sl-loader-items .sl-item::after {
     content: "";
     display: block;
     position: absolute;
@@ -431,14 +431,14 @@
     box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.spinner2 .loader .loader-items .item {
+.sl-spinner2 .sl-loader .sl-loader-items .sl-item {
     -webkit-transform: rotate(calc(var(--i) * 45deg));
     transform: rotate(calc(var(--i) * 45deg));
     -webkit-transform-origin: 50px 50px;
     transform-origin: 50px 50px;
 }
 
-.spinner2 .loader .loader-items .item::after {
+.sl-spinner2 .sl-loader .sl-loader-items .sl-item::after {
     content: "";
     display: block;
     position: absolute;
@@ -448,13 +448,13 @@
     height: 10px;
     background-color: var(--bg);
     border-radius: 50%;
-    -webkit-animation: spinner2 800ms linear infinite;
-    animation: spinner2 800ms linear infinite;
+    -webkit-animation: sl-spinner2 800ms linear infinite;
+    animation: sl-spinner2 800ms linear infinite;
     -webkit-animation-delay: calc(var(--i) * 100ms);
     animation-delay: calc(var(--i) * 100ms);
 }
 
-.spinner3 .loader .loader-items .circle {
+.sl-spinner3 .sl-loader .sl-loader-items .sl-circle {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -465,11 +465,11 @@
     transform: translate(-50%, -50%);
     border: 10px solid var(--border);
     border-top: 10px solid var(--bg);
-    -webkit-animation: spinner3 800ms linear infinite;
-    animation: spinner3 800ms linear infinite;
+    -webkit-animation: sl-spinner3 800ms linear infinite;
+    animation: sl-spinner3 800ms linear infinite;
 }
 
-.ekvalayzer .loader-items {
+.sl-ekvalayzer .sl-loader-items {
     width: 100%;
     height: 100px;
     display: -webkit-box;
@@ -491,7 +491,7 @@
     zoom: var(--size);
 }
 
-.ekvalayzer .loader-items .parent-rectangular {
+.sl-ekvalayzer .sl-loader-items .sl-parent-rectangular {
     padding: 3px;
     width: -webkit-min-content;
     width: -moz-min-content;
@@ -501,18 +501,18 @@
     height: min-content;
 }
 
-.ekvalayzer .loader-items .parent-rectangular .rectangular {
+.sl-ekvalayzer .sl-loader-items .sl-parent-rectangular .sl-rectangular {
     width: 10px;
     background-color: var(--bg);
     -webkit-box-shadow: 0 0 10px 2px var(--bg);
     box-shadow: 0 0 10px 2px var(--bg);
-    -webkit-animation: ekvalayzer1 500ms ease-in-out infinite;
-    animation: ekvalayzer1 500ms ease-in-out infinite;
+    -webkit-animation: sl-ekvalayzer1 500ms ease-in-out infinite;
+    animation: sl-ekvalayzer1 500ms ease-in-out infinite;
     -webkit-animation-delay: calc(var(--i) * -100ms);
     animation-delay: calc(var(--i) * -100ms);
 }
 
-.hourglass .loader-items {
+.sl-hourglass .sl-loader-items {
     width: 100%;
     height: 100px;
     position: relative;
@@ -535,16 +535,16 @@
     zoom: var(--size);
 }
 
-.hourglass .loader-items .hourglass-item {
+.sl-hourglass .sl-loader-items .sl-hourglass-item {
     border: 30px solid transparent;
     border-top-color: var(--bg);
     border-bottom-color: var(--bg);
     border-radius: 50%;
-    -webkit-animation: hourglass 1.2s ease-in infinite;
-    animation: hourglass 1.2s ease-in infinite;
+    -webkit-animation: sl-hourglass 1.2s ease-in infinite;
+    animation: sl-hourglass 1.2s ease-in infinite;
 }
 
-@-webkit-keyframes box1 {
+@-webkit-keyframes sl-box1 {
     to {
         -webkit-transform: translate(-50%, -50%) rotateX(0deg);
         transform: translate(-50%, -50%) rotateX(0deg);
@@ -555,7 +555,7 @@
     }
 }
 
-@keyframes box1 {
+@keyframes sl-box1 {
     to {
         -webkit-transform: translate(-50%, -50%) rotateX(0deg);
         transform: translate(-50%, -50%) rotateX(0deg);
@@ -566,7 +566,7 @@
     }
 }
 
-@-webkit-keyframes box2 {
+@-webkit-keyframes sl-box2 {
     to {
         -webkit-transform: translate(-50%, -50%) rotateY(0deg);
         transform: translate(-50%, -50%) rotateY(0deg);
@@ -577,7 +577,7 @@
     }
 }
 
-@keyframes box2 {
+@keyframes sl-box2 {
     to {
         -webkit-transform: translate(-50%, -50%) rotateY(0deg);
         transform: translate(-50%, -50%) rotateY(0deg);
@@ -588,7 +588,7 @@
     }
 }
 
-@-webkit-keyframes box3 {
+@-webkit-keyframes sl-box3 {
     to {
         -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
         transform: translate(-50%, -50%) rotateZ(0deg);
@@ -599,7 +599,7 @@
     }
 }
 
-@keyframes box3 {
+@keyframes sl-box3 {
     to {
         -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
         transform: translate(-50%, -50%) rotateZ(0deg);
@@ -610,7 +610,7 @@
     }
 }
 
-@-webkit-keyframes box4 {
+@-webkit-keyframes sl-box4 {
     from {
         height: 30px;
     }
@@ -622,7 +622,7 @@
     }
 }
 
-@keyframes box4 {
+@keyframes sl-box4 {
     from {
         height: 30px;
     }
@@ -634,7 +634,7 @@
     }
 }
 
-@-webkit-keyframes rectangular-ping {
+@-webkit-keyframes sl-rectangular-ping {
     from {
         left: -10px;
     }
@@ -643,7 +643,7 @@
     }
 }
 
-@keyframes rectangular-ping {
+@keyframes sl-rectangular-ping {
     from {
         left: -10px;
     }
@@ -652,7 +652,7 @@
     }
 }
 
-@-webkit-keyframes bubble1 {
+@-webkit-keyframes sl-bubble1 {
     to {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -667,7 +667,7 @@
     }
 }
 
-@keyframes bubble1 {
+@keyframes sl-bubble1 {
     to {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -682,7 +682,7 @@
     }
 }
 
-@-webkit-keyframes bubble2 {
+@-webkit-keyframes sl-bubble2 {
     to {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -697,7 +697,7 @@
     }
 }
 
-@keyframes bubble2 {
+@keyframes sl-bubble2 {
     to {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -712,7 +712,7 @@
     }
 }
 
-@-webkit-keyframes bubble3 {
+@-webkit-keyframes sl-bubble3 {
     from {
         width: 15px;
         height: 15px;
@@ -725,7 +725,7 @@
     }
 }
 
-@keyframes bubble3 {
+@keyframes sl-bubble3 {
     from {
         width: 15px;
         height: 15px;
@@ -738,7 +738,7 @@
     }
 }
 
-@-webkit-keyframes bubble4 {
+@-webkit-keyframes sl-bubble4 {
     from {
         -webkit-transform: rotate(0);
         transform: rotate(0);
@@ -761,7 +761,7 @@
     }
 }
 
-@keyframes bubble4 {
+@keyframes sl-bubble4 {
     from {
         -webkit-transform: rotate(0);
         transform: rotate(0);
@@ -784,7 +784,7 @@
     }
 }
 
-@-webkit-keyframes heart1 {
+@-webkit-keyframes sl-heart1 {
     to {
         -webkit-transform: translate(-60%, -60%) scale(0.5);
         transform: translate(-60%, -60%) scale(0.5);
@@ -807,7 +807,7 @@
     }
 }
 
-@keyframes heart1 {
+@keyframes sl-heart1 {
     to {
         -webkit-transform: translate(-60%, -60%) scale(0.5);
         transform: translate(-60%, -60%) scale(0.5);
@@ -830,7 +830,7 @@
     }
 }
 
-@-webkit-keyframes spinner1 {
+@-webkit-keyframes sl-spinner1 {
     to {
         opacity: 0;
     }
@@ -839,7 +839,7 @@
     }
 }
 
-@keyframes spinner1 {
+@keyframes sl-spinner1 {
     to {
         opacity: 0;
     }
@@ -848,7 +848,7 @@
     }
 }
 
-@-webkit-keyframes spinner2 {
+@-webkit-keyframes sl-spinner2 {
     to {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -859,7 +859,7 @@
     }
 }
 
-@keyframes spinner2 {
+@keyframes sl-spinner2 {
     to {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -870,7 +870,7 @@
     }
 }
 
-@-webkit-keyframes spinner3 {
+@-webkit-keyframes sl-spinner3 {
     to {
         -webkit-transform: translate(-50%, -50%) rotate(360deg);
         transform: translate(-50%, -50%) rotate(360deg);
@@ -881,7 +881,7 @@
     }
 }
 
-@keyframes spinner3 {
+@keyframes sl-spinner3 {
     to {
         -webkit-transform: translate(-50%, -50%) rotate(360deg);
         transform: translate(-50%, -50%) rotate(360deg);
@@ -892,7 +892,7 @@
     }
 }
 
-@-webkit-keyframes ekvalayzer1 {
+@-webkit-keyframes sl-ekvalayzer1 {
     from {
         height: calc(var(--w) * 20px);
     }
@@ -904,7 +904,7 @@
     }
 }
 
-@keyframes ekvalayzer1 {
+@keyframes sl-ekvalayzer1 {
     from {
         height: calc(var(--w) * 20px);
     }
@@ -916,7 +916,7 @@
     }
 }
 
-@-webkit-keyframes hourglass {
+@-webkit-keyframes sl-hourglass {
     from {
         -webkit-transform: rotate(0);
         transform: rotate(0);
@@ -935,7 +935,7 @@
     }
 }
 
-@keyframes hourglass {
+@keyframes sl-hourglass {
     from {
         -webkit-transform: rotate(0);
         transform: rotate(0);
@@ -954,7 +954,7 @@
     }
 }
 
-@-webkit-keyframes box6 {
+@-webkit-keyframes sl-box6 {
     from {
         top: 0;
         background-color: var(--bga);
@@ -987,7 +987,7 @@
     }
 }
 
-@keyframes box6 {
+@keyframes sl-box6 {
     from {
         top: 0;
         background-color: var(--bga);
