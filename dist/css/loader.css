@@ -40,8 +40,7 @@
 .sl-box5,
 .sl-box4,
 .sl-box3,
-.sl-box2,
-.sl-box1 {
+.sl-box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -70,16 +69,14 @@
 .sl-box5 .sl-loader,
 .sl-box4 .sl-loader,
 .sl-box3 .sl-loader,
-.sl-box2 .sl-loader,
-.sl-box1 .sl-loader {
+.sl-box2 .sl-loader {
     width: 100px;
     -ms-zoom: var(--size);
     zoom: var(--size);
 }
 
 .sl-box3 .sl-loader .sl-loader-items,
-.sl-box2 .sl-loader .sl-loader-items,
-.sl-box1 .sl-loader .sl-loader-items {
+.sl-box2 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     -webkit-perspective: 100px;
@@ -89,8 +86,7 @@
 }
 
 .sl-box3 .sl-loader .sl-loader-items .sl-parent-cub,
-.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub,
-.sl-box1 .sl-loader .sl-loader-items .sl-parent-cub {
+.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub {
     width: 100px;
     height: 100px;
     position: relative;
@@ -101,8 +97,7 @@
 }
 
 .sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub,
-.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub,
-.sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
+.sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
     width: 50px;
     height: 50px;
     top: 50%;
@@ -111,11 +106,6 @@
     transform: translate(-50%, -50%);
     position: absolute;
     background-color: var(--bg);
-}
-
-.sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
-    -webkit-animation: sl-box1 500ms ease infinite;
-    animation: sl-box1 500ms ease infinite;
 }
 
 .sl-box2 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {
@@ -542,28 +532,6 @@ sl-.box5 .sl-loader .sl-loader-items .sl-rectangular-ping::before {
     border-radius: 50%;
     -webkit-animation: sl-hourglass 1.2s ease-in infinite;
     animation: sl-hourglass 1.2s ease-in infinite;
-}
-
-@-webkit-keyframes sl-box1 {
-    to {
-        -webkit-transform: translate(-50%, -50%) rotateX(0deg);
-        transform: translate(-50%, -50%) rotateX(0deg);
-    }
-    from {
-        -webkit-transform: translate(-50%, -50%) rotateX(180deg);
-        transform: translate(-50%, -50%) rotateX(180deg);
-    }
-}
-
-@keyframes sl-box1 {
-    to {
-        -webkit-transform: translate(-50%, -50%) rotateX(0deg);
-        transform: translate(-50%, -50%) rotateX(0deg);
-    }
-    from {
-        -webkit-transform: translate(-50%, -50%) rotateX(180deg);
-        transform: translate(-50%, -50%) rotateX(180deg);
-    }
 }
 
 @-webkit-keyframes sl-box2 {

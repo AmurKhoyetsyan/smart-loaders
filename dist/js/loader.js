@@ -31,6 +31,28 @@
         rectangularPing: "rectangular-ping"
     };
 
+    // "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;}"
+    // "[data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);}"
+
+    const loaderStylesText = {
+        boxRotateX: "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} .sl-box1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box1 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);} .sl-box1 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box1 500ms ease infinite;animation: sl-box1 500ms ease infinite;} @-webkit-keyframes sl-box1 {to {-webkit-transform: translate(-50%, -50%) rotateX(0deg);transform: translate(-50%, -50%) rotateX(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateX(180deg);transform: translate(-50%, -50%) rotateX(180deg);}} @keyframes sl-box1 {to {-webkit-transform: translate(-50%, -50%) rotateX(0deg);transform: translate(-50%, -50%) rotateX(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateX(180deg);transform: translate(-50%, -50%) rotateX(180deg);}}",
+        boxRotateY: "box-rotate-y",
+        boxRotateZ: "box-rotate-z",
+        boxRectangular: "box-rectangular",
+        boxUp: "box-up",
+        heart: "heart",
+        bubbleScale: "bubble-scale",
+        bubbleTop: "bubble-top",
+        bubblePing: "bubble-ping",
+        bubbleSpin: "bubble-spin",
+        spinnerCub: "spinner-cub",
+        spinnerCircle: "spinner-circle",
+        spinnerDefault: "spinner-default",
+        ekvalayzer: "ekvalayzer",
+        hourglass: "hourglass",
+        rectangularPing: "rectangular-ping"
+    };
+
     /**
      * @type {{lightslategrey: string, darkviolet: string, bisque: string, cyan: string, darkslateblue: string, lightgrey: string, khaki: string, darkgray: string, blanchedalmond: string, saddlebrown: string, darkblue: string, lightcoral: string, moccasin: string, orangered: string, azure: string, lightgoldenrodyellow: string, skyblue: string, chartreuse: string, deepskyblue: string, mediumpurple: string, lightyellow: string, violet: string, palevioletred: string, dimgrey: string, rosybrown: string, honeydew: string, mediumblue: string, darkseagreen: string, limegreen: string, paleturquoise: string, burlywood: string, mediumorchid: string, papayawhip: string, silver: string, chocolate: string, lightsteelblue: string, pink: string, darkgreen: string, seashell: string, sienna: string, thistle: string, yellow: string, cornsilk: string, lightseagreen: string, blueviolet: string, tomato: string, cornflowerblue: string, gold: string, sandybrown: string, springgreen: string, crimson: string, gray: string, mediumvioletred: string, slategrey: string, darkcyan: string, ivory: string, darkmagenta: string, wheat: string, indianred: string, darkorchid: string, mintcream: string, whitesmoke: string, lightpink: string, black: string, teal: string, cadetblue: string, beige: string, darkkhaki: string, blue: string, darkslategray: string, royalblue: string, seagreen: string, purple: string, orchid: string, forestgreen: string, darksalmon: string, palegreen: string, lightslategray: string, navy: string, greenyellow: string, red: string, aqua: string, dodgerblue: string, lightblue: string, white: string, olive: string, coral: string, peachpuff: string, darkolivegreen: string, darkturquoise: string, darkgrey: string, lavender: string, gainsboro: string, lightgray: string, plum: string, tan: string, midnightblue: string, powderblue: string, dimgray: string, lemonchiffon: string, salmon: string, brown: string, lightgreen: string, goldenrod: string, steelblue: string, lightsalmon: string, darkred: string, snow: string, olivedrab: string, yellowgreen: string, indigo: string, lawngreen: string, magenta: string, aquamarine: string, floralwhite: string, antiquewhite: string, hotpink: string, turquoise: string, peru: string, fuchsia: string, aliceblue: string, firebrick: string, darkgoldenrod: string, lavenderblush: string, navajowhite: string, mediumspringgreen: string, mistyrose: string, slategray: string, darkorange: string, linen: string, slateblue: string, lightcyan: string, lightskyblue: string, mediumseagreen: string, deeppink: string, mediumturquoise: string, ghostwhite: string, green: string, lime: string, mediumaquamarine: string, oldlace: string, grey: string, orange: string, darkslategrey: string, mediumslateblue: string, maroon: string, palegoldenrod: string}}
      */
@@ -379,7 +401,7 @@
         if(item.hasAttribute('title')) {
             let color = item.hasAttribute('title-color') ? item.getAttribute('title-color') : "#FFFFFF";
             let loaderTitle = document.createElement('DIV');
-            loaderTitle.classList.add('loader-title');
+            loaderTitle.classList.add('sl-loader-title');
             loaderTitle.setAttribute("style", `--cl: ${color}`);
             let span = document.createElement('SPAN');
             span.innerText = item.getAttribute('title');
@@ -413,19 +435,19 @@
      * @param index
      * @param classes
      */
-    const boxRotate = (item, index, classes) => {
+    const boxRotate = (item, index, classes, typeLoader) => {
         let cub = document.createElement('DIV');
-        cub.classList.add('cub');
+        cub.classList.add('sl-cub');
         cub.setAttribute("style", `--bg: ${getBackground(item)}`);
 
         let parentCub = document.createElement('DIV');
-        parentCub.classList.add('parent-cub');
+        parentCub.classList.add('sl-parent-cub');
 
         let loaderItems = document.createElement('DIV');
-        loaderItems.classList.add('loader-items');
+        loaderItems.classList.add('sl-loader-items');
 
         let loader = document.createElement('DIV');
-        loader.classList.add('loader');
+        loader.classList.add('sl-loader');
 
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
@@ -437,6 +459,12 @@
         let box = document.createElement('DIV');
         box.classList.add(classes);
         box.appendChild(loader);
+
+        let style = document.createElement('STYLE');
+        style.setAttribute('type', 'text/css');
+        style.innerText = loaderStylesText[typeLoader];
+
+        item.appendChild(style);
         item.appendChild(box);
         createTitle(item);
     };
@@ -512,9 +540,9 @@
      * @type {{ekvalayzer: ekvalayzer, bubbleScale: (function(*=, *=): void), bubblePing: (function(*=, *=): void), spinnerCub: (function(*=, *=): void), rectangularPing: rectangularPing, heart: heart, spinnerCircle: (function(*=, *=): void), bubbleTop: (function(*=, *=): void), bubbleSpin: bubbleSpin, hourglass: hourglass, boxRectangular: (function(*=, *=): void), boxRotateZ: (function(*=, *=): void), boxRotateY: (function(*=, *=): void), boxRotateX: (function(*=, *=): void), spinnerDefault: spinnerDefault, boxUp: boxUp}}
      */
     const loaderCreate = {
-        boxRotateX: (item, index) => boxRotate(item, index, 'box1'),
-        boxRotateY: (item, index) => boxRotate(item, index, 'box2'),
-        boxRotateZ: (item, index) => boxRotate(item, index, 'box3'),
+        boxRotateX: (item, index) => boxRotate(item, index, 'sl-box1', 'boxRotateX'),
+        boxRotateY: (item, index) => boxRotate(item, index, 'sl-box2', 'boxRotateY'),
+        boxRotateZ: (item, index) => boxRotate(item, index, 'sl-box3', 'boxRotateZ'),
         boxUp: (item, index) => {
             let loaderItems = document.createElement('DIV');
             loaderItems.classList.add('loader-items');
