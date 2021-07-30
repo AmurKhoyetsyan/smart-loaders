@@ -30,8 +30,7 @@
 .sl-ekvalayzer,
 .sl-spinner3,
 .sl-spinner2,
-.sl-spinner1,
-.sl-heart1 {
+.sl-spinner1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -52,56 +51,17 @@
 .sl-hourglass,
 .sl-spinner3 .sl-loader,
 .sl-spinner2 .sl-loader,
-.sl-spinner1 .sl-loader,
-.sl-heart1 .sl-loader {
+.sl-spinner1 .sl-loader {
     width: 100px;
     -ms-zoom: var(--size);
     zoom: var(--size);
 }
 
 .sl-spinner3 .sl-loader .sl-loader-items,
-.sl-spinner2 .sl-loader .sl-loader-items,
-.sl-heart1 .sl-loader .sl-loader-items {
+.sl-spinner2 .sl-loader .sl-loader-items {
     width: 100%;
     height: 100px;
     position: relative;
-}
-
-.sl-heart1 .sl-loader .sl-loader-items .sl-heart {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-85%, -75%);
-    transform: translate(-85%, -75%);
-    background-color: var(--bg);
-    -webkit-animation: sl-heart1 1000ms linear infinite;
-    animation: sl-heart1 1000ms linear infinite;
-}
-
-.sl-heart1 .sl-loader .sl-loader-items .sl-heart::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: absolute;
-    left: 30px;
-    top: 0;
-    background-color: var(--bg);
-}
-
-.sl-heart1 .sl-loader .sl-loader-items .sl-heart::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    background-color: var(--bg);
 }
 
 .sl-spinner1 .sl-loader .sl-loader-items {
@@ -248,52 +208,6 @@
     border-radius: 50%;
     -webkit-animation: sl-hourglass 1.2s ease-in infinite;
     animation: sl-hourglass 1.2s ease-in infinite;
-}
-
-@-webkit-keyframes sl-heart1 {
-    to {
-        -webkit-transform: translate(-60%, -60%) scale(0.5);
-        transform: translate(-60%, -60%) scale(0.5);
-    }
-    30% {
-        -webkit-transform: translate(-80%, -70%) scale(0.8);
-        transform: translate(-80%, -70%) scale(0.8);
-    }
-    60% {
-        -webkit-transform: translate(-60%, -60%) scale(0.5);
-        transform: translate(-60%, -60%) scale(0.5);
-    }
-    80% {
-        -webkit-transform: translate(-80%, -70%) scale(0.8);
-        transform: translate(-80%, -70%) scale(0.8);
-    }
-    from {
-        -webkit-transform: translate(-85%, -75%) scale(1);
-        transform: translate(-85%, -75%) scale(1);
-    }
-}
-
-@keyframes sl-heart1 {
-    to {
-        -webkit-transform: translate(-60%, -60%) scale(0.5);
-        transform: translate(-60%, -60%) scale(0.5);
-    }
-    30% {
-        -webkit-transform: translate(-80%, -70%) scale(0.8);
-        transform: translate(-80%, -70%) scale(0.8);
-    }
-    60% {
-        -webkit-transform: translate(-60%, -60%) scale(0.5);
-        transform: translate(-60%, -60%) scale(0.5);
-    }
-    80% {
-        -webkit-transform: translate(-80%, -70%) scale(0.8);
-        transform: translate(-80%, -70%) scale(0.8);
-    }
-    from {
-        -webkit-transform: translate(-85%, -75%) scale(1);
-        transform: translate(-85%, -75%) scale(1);
-    }
 }
 
 @-webkit-keyframes sl-spinner1 {
