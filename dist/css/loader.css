@@ -27,8 +27,7 @@
 
 [data-loader],
 .sl-hourglass,
-.sl-ekvalayzer,
-.sl-spinner3 {
+.sl-ekvalayzer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
