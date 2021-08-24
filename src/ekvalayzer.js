@@ -1,19 +1,19 @@
 /**
  * Copyright (c) Amur 2020
- * 
+ *
  * Smart Loaders
  * https://github.com/AmurKhoyetsyan/smart-loaders
- * 
+ *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-;(function() {
+;(function () {
     /**
      * @param item
      */
-     let createTitle = item => {
-        if(item.hasAttribute('title')) {
+    let createTitle = item => {
+        if (item.hasAttribute('title')) {
             let color = item.hasAttribute('title-color') ? item.getAttribute('title-color') : "#FFFFFF";
             let loaderTitle = document.createElement('DIV');
             loaderTitle.classList.add('sl-loader-title');
@@ -29,9 +29,9 @@
      * @param count
      * @returns {string|number}
      */
-     const getZoom = count => {
+    const getZoom = count => {
         let size = parseFloat(count);
-        if(size === 0) {
+        if (size === 0) {
             return 0;
         }
 
@@ -45,6 +45,10 @@
      */
     const getBackground = item => item.hasAttribute('loader-color') ? item.getAttribute('loader-color') : "#FFFFFF";
 
+    /**
+     * @param item
+     * @param index
+     */
     let ekvalayzer = (item, index) => {
         let loaderItems = document.createElement('DIV');
         loaderItems.classList.add('sl-loader-items');
@@ -128,13 +132,13 @@
      * @param attr
      * @returns {string}
      */
-    mutator.attrListString = function(attr) {
+    mutator.attrListString = function (attr) {
         let str = "";
-        if(attr.length === 0) {
+        if (attr.length === 0) {
             return str;
         }
 
-        for(let item of attr) {
+        for (let item of attr) {
             str += `${item.name}: ${item.value}; `;
         }
 
@@ -146,32 +150,32 @@
      * @param node2
      * @returns {boolean}
      */
-    mutator.equalsNode = function(node1, node2) {
+    mutator.equalsNode = function (node1, node2) {
         let attr1 = node1.attributes;
         let attr2 = node2.attributes;
 
         let len1 = attr1.length;
 
-        if(len1 !== attr2.length) {
+        if (len1 !== attr2.length) {
             return false;
         }
 
-        if(mutator.attrListString(attr1) !== mutator.attrListString(attr2)) {
+        if (mutator.attrListString(attr1) !== mutator.attrListString(attr2)) {
             return false;
         }
 
         return true;
     };
 
-    mutator.equals = function() {
+    mutator.equals = function () {
         this.loaders = document.querySelectorAll('[data-loader]');
 
-        if(this.olderLoaders.length !== this.loaders.length) {
+        if (this.olderLoaders.length !== this.loaders.length) {
             return false;
         }
 
-        for(let [index, item] of this.loaders.entries()) {
-            if(!this.equalsNode(item, this.olderLoaders[index])) {
+        for (let [index, item] of this.loaders.entries()) {
+            if (!this.equalsNode(item, this.olderLoaders[index])) {
                 return false;
             }
         }
@@ -182,22 +186,22 @@
     /**
      * @param item
      */
-    mutator.removeAnotherLoaders = function(item) {
-        while(item.firstChild) {
+    mutator.removeAnotherLoaders = function (item) {
+        while (item.firstChild) {
             item.removeChild(item.firstChild);
         }
     };
 
-    mutator.disconnect = function() {
-        if(!this.observer) {
+    mutator.disconnect = function () {
+        if (!this.observer) {
             return false;
         }
 
         this.observer.disconnect();
     };
 
-    mutator.replaceLoader = function() {
-        if(mutator.loaders && !mutator.equals()) {
+    mutator.replaceLoader = function () {
+        if (mutator.loaders && !mutator.equals()) {
             mutator.disconnect();
             mutator.loaders.forEach((item, index) => mutator.removeAnotherLoaders(item));
             mutator.addLoaders();
@@ -208,34 +212,34 @@
     /**
      * @param nodeList
      */
-    mutator.cloneNodeList = function(nodeList) {
+    mutator.cloneNodeList = function (nodeList) {
         this.olderLoaders = [];
         nodeList.forEach((item, index) => {
             this.olderLoaders.push(item.cloneNode(true));
         });
     };
 
-    mutator.addLoaders = function() {
+    mutator.addLoaders = function () {
         let loaders = document.querySelectorAll('[data-loader="ekvalayzer"]');
         this.loaders = loaders;
         this.cloneNodeList(loaders);
     };
 
-    mutator.connect = function() {
+    mutator.connect = function () {
         this.observer = new MutationObserver(this.replaceLoader);
     };
 
-    mutator.start = function() {
-        if(!this.observer) {
+    mutator.start = function () {
+        if (!this.observer) {
             this.connect();
             this.addLoaders();
         }
 
-        if(this.loaders.length > 0) {
+        if (this.loaders.length > 0) {
             this.loaders.forEach((item, index) => ekvalayzer(item, index));
         }
 
-        if(this.observer) {
+        if (this.observer) {
             this.observer.observe(document, this.option);
         }
     };
