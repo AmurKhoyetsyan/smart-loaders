@@ -1,14 +1,14 @@
 /**
  * Copyright (c) Amur 2020
- * 
+ *
  * Smart Loaders
  * https://github.com/AmurKhoyetsyan/smart-loaders
- * 
+ *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-;(function(){
+;(function () {
     /**
      * @type {{ekvalayzer: string, bubbleScale: string, bubblePing: string, spinnerCub: string, rectangularPing: string, heart: string, spinnerCircle: string, bubbleTop: string, bubbleSpin: string, hourglass: string, boxRectangular: string, boxRotateZ: string, boxRotateY: string, boxRotateX: string, spinnerDefault: string, boxUp: string}}
      */
@@ -212,7 +212,7 @@
      */
     const getColorByName = name => {
         let key = name.toLowerCase();
-        if(colorTypes.hasOwnProperty(key)) {
+        if (colorTypes.hasOwnProperty(key)) {
             return colorTypes[key];
         }
 
@@ -238,7 +238,7 @@
     let percentToCountForRGB = p => {
         let per = parseInt(p);
 
-        if(isNaN(per) || per === 0) {
+        if (isNaN(per) || per === 0) {
             return rgbToHex(0);
         }
 
@@ -270,24 +270,24 @@
         let s = parseInt(sat);
         let l = parseInt(light);
 
-        if(isNaN(s) || isNaN(l)) {
+        if (isNaN(s) || isNaN(l)) {
             return '#000000';
         }
 
-        if(h < 0 || sat < 0 || sat > 100 || light < 0 || light > 100) {
+        if (h < 0 || sat < 0 || sat > 100 || light < 0 || light > 100) {
             return '#000000';
         }
 
         if (h.indexOf("deg") > -1) {
-            h = h.substr(0,h.length - 3);
+            h = h.substr(0, h.length - 3);
         }
 
         if (h.indexOf("rad") > -1) {
-            h = Math.round(h.substr(0,h.length - 3) * (180 / Math.PI));
+            h = Math.round(h.substr(0, h.length - 3) * (180 / Math.PI));
         }
 
         if (h.indexOf("turn") > -1) {
-            h = Math.round(h.substr(0,h.length - 4) * 360);
+            h = Math.round(h.substr(0, h.length - 4) * 360);
         }
 
         if (h >= 360) {
@@ -299,38 +299,50 @@
 
         let c = (1 - (Math.abs((2 * l) - 1))) * s;
         let x = c * (1 - Math.abs(((h / 60) % 2 - 1)));
-        let m = l - c/2;
+        let m = l - c / 2;
         let r = 0;
         let g = 0;
         let b = 0;
 
         if (0 <= h && h < 60) {
-            r = c; g = x; b = 0;
+            r = c;
+            g = x;
+            b = 0;
         } else if (60 <= h && h < 120) {
-            r = x; g = c; b = 0;
+            r = x;
+            g = c;
+            b = 0;
         } else if (120 <= h && h < 180) {
-            r = 0; g = c; b = x;
+            r = 0;
+            g = c;
+            b = x;
         } else if (180 <= h && h < 240) {
-            r = 0; g = x; b = c;
+            r = 0;
+            g = x;
+            b = c;
         } else if (240 <= h && h < 300) {
-            r = x; g = 0; b = c;
+            r = x;
+            g = 0;
+            b = c;
         } else if (300 <= h && h < 360) {
-            r = c; g = 0; b = x;
+            r = c;
+            g = 0;
+            b = x;
         }
         // Having obtained RGB, convert channels to hex
         r = Math.round((r + m) * 255).toString(16);
         g = Math.round((g + m) * 255).toString(16);
         b = Math.round((b + m) * 255).toString(16);
 
-        if (r.length === 1){
+        if (r.length === 1) {
             r = "0" + r;
         }
 
-        if (g.length === 1){
+        if (g.length === 1) {
             g = "0" + g;
         }
 
-        if (b.length === 1){
+        if (b.length === 1) {
             b = "0" + b;
         }
 
@@ -343,7 +355,7 @@
      * @returns {string}
      */
     let hexColorThreeDigitToSixDigit = (color, alpha) => {
-        if(color.length === 4) {
+        if (color.length === 4) {
             let thereHex = color.substring(1, color.length);
             let thereArray = thereHex.split('');
             let sixHex = thereArray.reduce((total, item) => total += item + item, '');
@@ -360,7 +372,7 @@
      */
     const trim = str => {
         str = str.split(' ').join('');
-        if(str.indexOf(' ') !== -1) {
+        if (str.indexOf(' ') !== -1) {
             return trim(str);
         }
 
@@ -373,18 +385,18 @@
      * @returns {string|*}
      */
     let rgbToPart = (color, alpha) => {
-        if(color.indexOf("rgb") !== -1) {
+        if (color.indexOf("rgb") !== -1) {
             let arrBefore = color.substring(4, color.length - 1);
             let arr = arrBefore.split(",");
 
             return "#" + fullColorHex(trim(arr[0]), trim(arr[1]), trim(arr[2])) + alpha;
         }
 
-        if(color.indexOf("#") !== -1) {
+        if (color.indexOf("#") !== -1) {
             return hexColorThreeDigitToSixDigit(color, alpha);
         }
 
-        if(color.indexOf("hsl") !== -1) {
+        if (color.indexOf("hsl") !== -1) {
             let arrBefore = color.substring(4, color.length - 1);
             let arr = arrBefore.split(",").join('').split(' ');
 
@@ -398,7 +410,7 @@
      * @param item
      */
     let createTitle = item => {
-        if(item.hasAttribute('title')) {
+        if (item.hasAttribute('title')) {
             let color = item.hasAttribute('title-color') ? item.getAttribute('title-color') : "#FFFFFF";
             let loaderTitle = document.createElement('DIV');
             loaderTitle.classList.add('sl-loader-title');
@@ -416,7 +428,7 @@
      */
     const getZoom = count => {
         let size = parseFloat(count);
-        if(size === 0) {
+        if (size === 0) {
             return 0;
         }
 
@@ -489,7 +501,7 @@
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
 
-        for(let i = start; i <= end; i++) {
+        for (let i = start; i <= end; i++) {
             let bubble = document.createElement('DIV');
             bubble.classList.add(itemClasses);
             bubble.setAttribute("style", `--i: ${i}; --bg: ${getBackground(item)}`);
@@ -529,7 +541,7 @@
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
 
-        for(let i = start; i <= end; i++) {
+        for (let i = start; i <= end; i++) {
             let spinnerItem = document.createElement('DIV');
             spinnerItem.classList.add('sl-item');
             spinnerItem.setAttribute("style", `--i: ${i}; --bg: ${getBackground(item)}`);
@@ -570,7 +582,7 @@
 
             let backgroundColor = getBackground(item);
 
-            for(let i = 0; i <= 4; i++) {
+            for (let i = 0; i <= 4; i++) {
                 let box = document.createElement('DIV');
                 box.classList.add('sl-item');
                 box.setAttribute("style", `--i: ${i}; --shadow: ${backgroundColor}; --bga: ${rgbToPart(backgroundColor, "80")}; --bg: ${backgroundColor}`);
@@ -653,8 +665,8 @@
             item.appendChild(spinner);
             createTitle(item);
         },
-        bubbleTop: (item, index) => bubbleLoading(item, index, 'sl-bubble2', 'sl-bubble',  1, 3, 'bubbleTop'),
-        bubblePing: (item, index) => bubbleLoading(item, index, 'sl-bubble3', 'sl-bubble',  1, 3, 'bubblePing'),
+        bubbleTop: (item, index) => bubbleLoading(item, index, 'sl-bubble2', 'sl-bubble', 1, 3, 'bubbleTop'),
+        bubblePing: (item, index) => bubbleLoading(item, index, 'sl-bubble3', 'sl-bubble', 1, 3, 'bubblePing'),
         ekvalayzer: (item, index) => {
             let loaderItems = document.createElement('DIV');
             loaderItems.classList.add('sl-loader-items');
@@ -759,13 +771,13 @@
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
             loader.setAttribute("style", `--size: ${size}`);
 
-            for(let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 3; i++) {
                 let circle = document.createElement('DIV');
                 circle.classList.add('sl-circle');
                 circle.setAttribute("style", `--bg: ${getBackground(item)}`);
                 itemContentLoader.appendChild(circle);
             }
-            
+
             loaderItems.appendChild(itemContentLoader);
             loader.appendChild(loaderItems);
 
@@ -781,7 +793,7 @@
             item.appendChild(bubble);
             createTitle(item);
         },
-        rectangularPing: (item, index) =>{
+        rectangularPing: (item, index) => {
             let loader = document.createElement('DIV');
             loader.classList.add('sl-loader');
             let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
@@ -818,8 +830,8 @@
      * @returns {string}
      */
     const getTypeLoader = type => {
-        for(let key in loaderTypes) {
-            if(loaderTypes[key] === type) {
+        for (let key in loaderTypes) {
+            if (loaderTypes[key] === type) {
                 return key;
             }
         }
@@ -853,13 +865,13 @@
      * @param attr
      * @returns {string}
      */
-    mutator.attrListString = function(attr) {
+    mutator.attrListString = function (attr) {
         let str = "";
-        if(attr.length === 0) {
+        if (attr.length === 0) {
             return str;
         }
 
-        for(let item of attr) {
+        for (let item of attr) {
             str += `${item.name}: ${item.value}; `;
         }
 
@@ -871,32 +883,32 @@
      * @param node2
      * @returns {boolean}
      */
-    mutator.equalsNode = function(node1, node2) {
+    mutator.equalsNode = function (node1, node2) {
         let attr1 = node1.attributes;
         let attr2 = node2.attributes;
 
         let len1 = attr1.length;
 
-        if(len1 !== attr2.length) {
+        if (len1 !== attr2.length) {
             return false;
         }
 
-        if(mutator.attrListString(attr1) !== mutator.attrListString(attr2)) {
+        if (mutator.attrListString(attr1) !== mutator.attrListString(attr2)) {
             return false;
         }
 
         return true;
     };
 
-    mutator.equals = function() {
+    mutator.equals = function () {
         this.loaders = document.querySelectorAll('[data-loader]');
 
-        if(this.olderLoaders.length !== this.loaders.length) {
+        if (this.olderLoaders.length !== this.loaders.length) {
             return false;
         }
 
-        for(let [index, item] of this.loaders.entries()) {
-            if(!this.equalsNode(item, this.olderLoaders[index])) {
+        for (let [index, item] of this.loaders.entries()) {
+            if (!this.equalsNode(item, this.olderLoaders[index])) {
                 return false;
             }
         }
@@ -907,22 +919,22 @@
     /**
      * @param item
      */
-    mutator.removeAnotherLoaders = function(item) {
-        while(item.firstChild) {
+    mutator.removeAnotherLoaders = function (item) {
+        while (item.firstChild) {
             item.removeChild(item.firstChild);
         }
     };
 
-    mutator.disconnect = function() {
-        if(!this.observer) {
+    mutator.disconnect = function () {
+        if (!this.observer) {
             return false;
         }
 
         this.observer.disconnect();
     };
 
-    mutator.replaceLoader = function() {
-        if(mutator.loaders && !mutator.equals()) {
+    mutator.replaceLoader = function () {
+        if (mutator.loaders && !mutator.equals()) {
             mutator.disconnect();
             mutator.loaders.forEach((item, index) => mutator.removeAnotherLoaders(item));
             mutator.addLoaders();
@@ -933,34 +945,34 @@
     /**
      * @param nodeList
      */
-    mutator.cloneNodeList = function(nodeList) {
+    mutator.cloneNodeList = function (nodeList) {
         this.olderLoaders = [];
         nodeList.forEach((item, index) => {
             this.olderLoaders.push(item.cloneNode(true));
         });
     };
 
-    mutator.addLoaders = function() {
+    mutator.addLoaders = function () {
         let loaders = document.querySelectorAll('[data-loader]');
         this.loaders = loaders;
         this.cloneNodeList(loaders);
     };
 
-    mutator.connect = function() {
+    mutator.connect = function () {
         this.observer = new MutationObserver(this.replaceLoader);
     };
 
-    mutator.start = function() {
-        if(!this.observer) {
+    mutator.start = function () {
+        if (!this.observer) {
             this.connect();
             this.addLoaders();
         }
 
-        if(this.loaders.length > 0) {
+        if (this.loaders.length > 0) {
             this.loaders.forEach((item, index) => createLoader(item, index));
         }
 
-        if(this.observer) {
+        if (this.observer) {
             this.observer.observe(document, this.option);
         }
     };
