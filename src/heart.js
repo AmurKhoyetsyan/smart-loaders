@@ -8,6 +8,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/**
+ * Copyright (c) Amur 2020
+ *
+ * Smart Loaders
+ * https://github.com/AmurKhoyetsyan/smart-loaders
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 ;(function () {
     /**
      * @param item
@@ -48,17 +58,8 @@
     /**
      * @param item
      * @param index
-     * @param classes
-     * @param typeLoader
      */
-    const boxRotate = (item, index, classes, typeLoader) => {
-        let cub = document.createElement('DIV');
-        cub.classList.add('sl-cub');
-        cub.setAttribute("style", `--bg: ${getBackground(item)}`);
-
-        let parentCub = document.createElement('DIV');
-        parentCub.classList.add('sl-parent-cub');
-
+    const heart = (item, index) => {
         let loaderItems = document.createElement('DIV');
         loaderItems.classList.add('sl-loader-items');
 
@@ -68,20 +69,23 @@
         let size = item.hasAttribute('size') ? getZoom(item.getAttribute('size')) : 1;
         loader.setAttribute("style", `--size: ${size}`);
 
-        parentCub.appendChild(cub);
-        loaderItems.appendChild(parentCub);
-        loader.appendChild(loaderItems);
+        let heart = document.createElement('DIV');
+        heart.classList.add('sl-heart');
+        heart.setAttribute("style", `--bg: ${getBackground(item)}`);
 
-        let box = document.createElement('DIV');
-        box.classList.add(classes);
-        box.appendChild(loader);
+        loaderItems.appendChild(heart);
+        loader.appendChild(loaderItems);
 
         let style = document.createElement('STYLE');
         style.setAttribute('type', 'text/css');
-        style.innerText = "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-box3 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-box3 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-box3 .sl-loader .sl-loader-items {width: 100%;height: 100px;-webkit-perspective: 100px;-ms-perspective: 100px;-o-perspective: 100px;perspective: 100px;}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub {width: 100px;height: 100px;position: relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: 50% 50% -50px;transform-origin: 50% 50% -50px;}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {width: 50px;height: 50px;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position: absolute;background-color: var(--bg);}.sl-box3 .sl-loader .sl-loader-items .sl-parent-cub .sl-cub {-webkit-animation: sl-box3 500ms ease infinite;animation: sl-box3 500ms ease infinite;} @-webkit-keyframes sl-box3 {to {-webkit-transform: translate(-50%, -50%) rotateZ(0deg);transform: translate(-50%, -50%) rotateZ(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateZ(180deg);transform: translate(-50%, -50%) rotateZ(180deg);}} @keyframes sl-box3 {to {-webkit-transform: translate(-50%, -50%) rotateZ(0deg);transform: translate(-50%, -50%) rotateZ(0deg);}from {-webkit-transform: translate(-50%, -50%) rotateZ(180deg);transform: translate(-50%, -50%) rotateZ(180deg);}}";
+        style.innerText = "[data-loader],[data-loader] * {padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;} [data-loader] .sl-loader-title {width: 100%;text-align: center;font-size: 17px;font-weight: 700;line-height: 1.7;color: var(--cl);} [data-loader], .sl-heart1 {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;} .sl-heart1 .sl-loader {width: 100px;-ms-zoom: var(--size);zoom: var(--size);} .sl-heart1 .sl-loader .sl-loader-items {width: 100%;height: 100px;position: relative;} .sl-heart1 .sl-loader .sl-loader-items .sl-heart {width: 40px;height: 40px;border-radius: 50%;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-85%, -75%);transform: translate(-85%, -75%);background-color: var(--bg);-webkit-animation: sl-heart1 1000ms linear infinite;animation: sl-heart1 1000ms linear infinite;} .sl-heart1 .sl-loader .sl-loader-items .sl-heart::after {content: '';width: 100%;height: 100%;border-radius: 50%;position: absolute;left: 30px;top: 0;background-color: var(--bg);} .sl-heart1 .sl-loader .sl-loader-items .sl-heart::before {content: '';width: 100%;height: 100%;-webkit-transform: rotate(45deg);transform: rotate(45deg);position: absolute;left: 15px;top: 15px;background-color: var(--bg);} @-webkit-keyframes sl-heart1 {to {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}30% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}60% {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}80% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}from {-webkit-transform: translate(-85%, -75%) scale(1);transform: translate(-85%, -75%) scale(1);}} @keyframes sl-heart1 {to {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}30% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}60% {-webkit-transform: translate(-60%, -60%) scale(0.5);transform: translate(-60%, -60%) scale(0.5);}80% {-webkit-transform: translate(-80%, -70%) scale(0.8);transform: translate(-80%, -70%) scale(0.8);}from {-webkit-transform: translate(-85%, -75%) scale(1);transform: translate(-85%, -75%) scale(1);}}";
 
         item.appendChild(style);
-        item.appendChild(box);
+
+        let heart1 = document.createElement('DIV');
+        heart1.classList.add('sl-heart1');
+        heart1.appendChild(loader);
+        item.appendChild(heart1);
         createTitle(item);
     };
 
@@ -189,7 +193,7 @@
     };
 
     mutator.addLoaders = function () {
-        let loaders = document.querySelectorAll('[data-loader="box-rotate-z"]');
+        let loaders = document.querySelectorAll('[data-loader="heart"]');
         this.loaders = loaders;
         this.cloneNodeList(loaders);
     };
@@ -205,7 +209,7 @@
         }
 
         if (this.loaders.length > 0) {
-            this.loaders.forEach((item, index) => boxRotate(item, index, 'sl-box3', 'boxRotateZ'));
+            this.loaders.forEach((item, index) => heart(item, index));
         }
 
         if (this.observer) {

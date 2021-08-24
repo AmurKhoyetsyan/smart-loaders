@@ -115,7 +115,6 @@
         createTitle(item);
     }
 
-
     let mutator = {
         option: {
             childList: true,
