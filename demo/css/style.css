@@ -27,7 +27,25 @@
           align-items: center;
 }
 
-.parent .row {
+.parent .parent-color {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.parent .parent-color .color {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--bg);
+    border-radius: 50%;
+}
+
+.parent .content {
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+}
+
+.parent .content .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,15 +55,15 @@
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.parent .row > .item {
+.parent .content .row > .item {
   width: 150px;
   height: 150px;
   display: -webkit-box;
