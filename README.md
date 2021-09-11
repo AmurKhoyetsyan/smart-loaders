@@ -26,6 +26,7 @@
 | bubble-top          | [bubble-top.js](./src/bubble-top.js)             | [bubble-top.min.js](./src/bubble-top.min.js)             |
 | bubble-ping         | [bubble-ping.js](./src/bubble-ping.js)           | [bubble-ping.min.js](./src/bubble-ping.min.js)           |
 | bubble-spin         | [bubble-spin.js](./src/bubble-spin.js)           | [bubble-spin.min.js](./src/bubble-spin.min.js)           |
+| bubble-loop         | [bubble-loop.js](./src/bubble-loop.js)           | [bubble-loop.min.js](./src/bubble-loop.min.js)           |
 | spinner-cub         | [spinner-cub.js](./src/spinner-cub.js)           | [spinner-cub.min.js](./src/spinner-cub.min.js)           |
 | spinner-circle      | [spinner-circle.js](./src/spinner-circle.js)     | [spinner-circle.min.js](./src/spinner-circle.min.js)     |
 | spinner-default     | [spinner-default.js](./src/spinner-default.js)   | [spinner-default.min.js](./src/spinner-default.min.js)   |
