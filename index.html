@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loader Pure JS</title>
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+            }
+
+            .parent {
+                padding: 50px;
+                width: 100%;
+                min-height: 100vh;
+                background-color: #202c39;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+            }
+
+            .parent .parent-color {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .parent .parent-color .color {
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                background-color: var(--bg);
+                border-radius: 50%;
+            }
+
+            .parent .content {
+                width: 500px;
+                height: 700px;
+            }
+
+            .zoom-out {
+                -webkit-transform: scale(.9);
+                transform: scale(.9);
+            }
+
+            .parent .content .row {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+            }
+
+            .parent .content .row > .item {
+                width: 150px;
+                height: 150px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="content">
+                <div class="zoom-out">
+                    <div class="row">
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #FFFFFF;" data-color="#FFFFFF"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #ef3535;" data-color="#ef3535"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #5c2ceb;" data-color="#5c2ceb"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #69f759;" data-color="#69f759"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #ef8905;" data-color="#ef8905"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #03a9f4;" data-color="#03a9f4"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #795548;" data-color="#795548"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #e91e63;" data-color="#e91e63"></div>
+                        </div>
+                        <div class="parent-color">
+                            <div class="color" style="--bg: #009688;" data-color="#009688"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <div data-loader="box-rotate-x" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-rotate-x" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="box-rotate-y" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-rotate-y" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="box-rotate-z" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-rotate-z" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="box-up" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-up" size="100"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <div data-loader="bubble-scale" loader-color="#FFFFFF" title-color="#FFFFFF" title="bubble-scale" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="heart" loader-color="#FFFFFF" title-color="#FFFFFF" title="heart" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="bubble-top" loader-color="#FFFFFF" title-color="#FFFFFF" title="bubble-top" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="spinner-cub" loader-color="#FFFFFF" title-color="#FFFFFF" title="spinner-cub" size="100"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <div data-loader="spinner-circle" loader-color="#FFFFFF" title-color="#FFFFFF" title="spinner-circle" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="spinner-default" loader-color="#FFFFFF" title-color="#FFFFFF" title="spinner-default" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="bubble-ping" loader-color="#FFFFFF" title-color="#FFFFFF" title="bubble-ping" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="ekvalayzer" loader-color="#FFFFFF" title-color="#FFFFFF" title="ekvalayzer" size="100"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <div data-loader="box-rectangular" loader-color="#FFFFFF" title-color="#FFFFFF" title="box-rectangular" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="hourglass" loader-color="#FFFFFF" title-color="#FFFFFF" title="hourglass" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="bubble-spin" loader-color="#FFFFFF" title-color="#FFFFFF" title="bubble-spin" size="100"></div>
+                        </div>
+                        <div class="item">
+                            <div data-loader="rectangular-ping" loader-color="#FFFFFF" title-color="#FFFFFF" title="rectangular-ping" size="100"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <div data-loader="bubble-loop" loader-color="#FFFFFF" title-color="#FFFFFF" title="bubble-loop" size="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./src/loader.min.js"></script>
+        <script type="text/javascript">
+            ;(function() {
+                let items = document.querySelectorAll('.parent-color .color');
+
+                if (items) {
+                    items.forEach(item => {
+                        item.addEventListener('click', (event) => {
+                            let color = item.getAttribute('data-color');
+
+                            let loaders = document.querySelectorAll('[data-loader]');
+
+                            loaders.forEach(load => {
+                                load.setAttribute('title-color', color);
+                                load.setAttribute('loader-color', color);
+                            });
+                        });
+                    });
+                }
+            })();
+        </script>
+    </body>
+</html>
