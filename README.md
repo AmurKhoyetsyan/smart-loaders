@@ -1,5 +1,7 @@
 ## Smart Loaders
 
+## [demo page](https://amurkhoyetsyan.github.io/smart-loaders/)
+
 ### Loaders JS
 
 <img src="https://raw.githubusercontent.com/AmurKhoyetsyan/react-js-loader/master/img/loader.gif" alt="loader" />
