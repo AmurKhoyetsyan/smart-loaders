@@ -487,6 +487,10 @@
     mutator.equals = function () {
         this.loaders = document.querySelectorAll('[data-loader]');
 
+        if (this.loaders === null) {
+            return false;
+        }
+
         if (this.olderLoaders.length !== this.loaders.length) {
             return false;
         }
@@ -538,8 +542,11 @@
 
     mutator.addLoaders = function () {
         let loaders = document.querySelectorAll('[data-loader="rectangular-ping"]');
-        this.loaders = loaders;
-        this.cloneNodeList(loaders);
+        
+        if (loaders !== null) {
+            this.loaders = loaders;
+            this.cloneNodeList(loaders);
+        }
     };
 
     mutator.connect = function () {
