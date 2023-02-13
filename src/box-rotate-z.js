@@ -137,7 +137,7 @@
     };
 
     mutator.equals = function () {
-        this.loaders = document.querySelectorAll('[data-loader]');
+        this.loaders = document.querySelectorAll('[data-loader="box-rotate-z"]');
 
         if (this.loaders === null) {
             return false;
