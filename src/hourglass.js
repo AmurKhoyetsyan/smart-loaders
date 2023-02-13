@@ -127,7 +127,7 @@
     };
 
     mutator.equals = function () {
-        this.loaders = document.querySelectorAll('[data-loader]');
+        this.loaders = document.querySelectorAll('[data-loader="hourglass"]');
 
         if (this.loaders === null) {
             return false;

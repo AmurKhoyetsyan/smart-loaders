@@ -128,7 +128,7 @@
     };
 
     mutator.equals = function () {
-        this.loaders = document.querySelectorAll('[data-loader]');
+        this.loaders = document.querySelectorAll('[data-loader="bubble-loop"]');
 
         if (this.loaders === null) {
             return false;
