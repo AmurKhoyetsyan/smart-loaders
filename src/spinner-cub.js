@@ -137,7 +137,7 @@
     };
 
     mutator.equals = function () {
-        this.loaders = document.querySelectorAll('[data-loader]');
+        this.loaders = document.querySelectorAll('[data-loader="spinner-cub"]');
 
         if (this.loaders === null) {
             return false;
