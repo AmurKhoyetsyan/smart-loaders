@@ -35,6 +35,7 @@
 | ekvalayzer          | [ekvalayzer.js](./src/ekvalayzer.js)             | [ekvalayzer.min.js](./src/ekvalayzer.min.js)             |
 | hourglass           | [hourglass.js](./src/hourglass.js)               | [hourglass.min.js](./src/hourglass.min.js)               |
 | rectangular-ping    | [rectangular-ping.js](./src/rectangular-ping.js) | [rectangular-ping.min.js](./src/rectangular-ping.min.js) |
+| ping-cube           | [ping-cube.js](./src/ping-cube.js)               | [ping-cube.min.js](./src/ping-cube.min.js)               |
 
 <br />
 
